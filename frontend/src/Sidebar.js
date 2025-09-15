@@ -34,7 +34,7 @@ const Sidebar = ({ filters, setFilters, crimes }) => {
 
           {/* Tab Content */}
           <div className="sidebar-content">
-            {activeTab === "filters" && <Filters filters={filters} setFilters={setFilters} />}
+            {activeTab === "filters" && <Filters filters={filters} setFilters={setFilters} crimes={crimes} />}
             {activeTab === "stats" && <CrimeStats crimes={crimes} />}
           </div>
         </>

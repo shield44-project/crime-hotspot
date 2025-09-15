@@ -28,9 +28,9 @@ A web application to visualize crime hotspots in India using interactive maps. T
 ### Backend
 
 ---
-1. Navigate to the backend folder:
+1. Navigate to the api folder:
 
-cd backend
+cd api
 Create and activate a virtual environment:
 
 
@@ -41,7 +41,7 @@ venv\Scripts\activate    # Windows
 ### Install required packages:
 ---
 pip install -r requirements.txt
-Make sure crime_data.csv exists in the backend folder.
+Make sure crime_data.csv exists in the api folder.
 
 Run the backend server:
 
@@ -79,14 +79,9 @@ Notes
 ---
 Make sure the backend is running before starting the frontend, otherwise markers will not load.
 
-The app currently does not use marker clustering to ensure compatibility with React 18.
+The app uses marker clustering for better performance and visualization.
 
-Future Improvements
-Add marker clustering for better visualization.
-
-Filter crimes by type, city, or state.
-
-Add search and zoom functionality.
+Filters are available for crime type, district, neighborhood, and date range.
 ---
 
 ---

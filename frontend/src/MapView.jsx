@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
+import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
 import "./MapView.css";
 
@@ -30,6 +31,13 @@ const MapView = ({ crimes }) => {
   const [selectedDistrict, setSelectedDistrict] = useState("");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState("");
   const [showFilters, setShowFilters] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const districts = [...new Set(crimes.map(c => c.District))];
   const neighborhoods = [...new Set(
@@ -52,8 +60,6 @@ const MapView = ({ crimes }) => {
       default: return "#2ecc71"; // green
     }
   };
-
-  const isMobile = window.innerWidth < 768;
 
   return (
     <div className="map-container">
@@ -87,10 +93,10 @@ const MapView = ({ crimes }) => {
       <div className="crime-stats-panel">
         <h3>Crime Stats</h3>
         <p>Total Crimes: {filteredCrimes.length}</p>
-        <p>Theft: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "theft").length}</p>
-        <p>Assault: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "assault").length}</p>
-        <p>Burglary: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "burglary").length}</p>
-        <p>Robbery: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "robbery").length}</p>
+        <p>Theft: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "theft").length}</p>
+        <p>Assault: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "assault").length}</p>
+        <p>Burglary: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "burglary").length}</p>
+        <p>Robbery: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "robbery").length}</p>
       </div>
 
       <MapContainer
@@ -106,26 +112,28 @@ const MapView = ({ crimes }) => {
         <FitBounds crimes={filteredCrimes} onBoundsChange={setCrimeBounds} />
         {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
 
-        {filteredCrimes.map((c, idx) => (
-          <CircleMarker
-            key={idx}
-            center={[c.Latitude, c.Longitude]}
-            radius={isMobile ? 10 : 6}
-            pathOptions={{
-              color: "#000", // border
-              fillColor: getColor(c.CrimeType), // fill color
-              fillOpacity: 0.8,
-              weight: isMobile ? 3 : 2
-            }}
-          >
-            <Popup>
-              <strong>{c.CrimeCode}</strong><br/>
-              {c.CrimeType}<br/>
-              {c.CrimeDateTime}<br/>
-              {c.District} - {c.Neighborhood}
-            </Popup>
-          </CircleMarker>
-        ))}
+        <MarkerClusterGroup>
+          {filteredCrimes.map((c, idx) => (
+            <CircleMarker
+              key={idx}
+              center={[c.Latitude, c.Longitude]}
+              radius={isMobile ? 10 : 6}
+              pathOptions={{
+                color: "#000", // border
+                fillColor: getColor(c.CrimeCode), // fill color
+                fillOpacity: 0.8,
+                weight: isMobile ? 3 : 2
+              }}
+            >
+              <Popup>
+                <strong>{c.CrimeCode}</strong><br/>
+                {c.CrimeType}<br/>
+                {c.CrimeDateTime}<br/>
+                {c.District} - {c.Neighborhood}
+              </Popup>
+            </CircleMarker>
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
     </div>
   );

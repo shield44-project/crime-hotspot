@@ -17,7 +17,7 @@ const App = () => {
   // Fetch data from Flask with filters
   const fetchData = () => {
     const params = new URLSearchParams(filters);
-    fetch(`http://127.0.0.1:5000/api/crimes?${params.toString()}`)
+    fetch(`/api/crimes?${params.toString()}`)
       .then(res => res.json())
       .then(data => setCrimes(data))
       .catch(err => console.error(err));
