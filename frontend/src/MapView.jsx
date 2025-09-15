@@ -52,6 +52,23 @@ const ResetViewButton = ({ bounds }) => {
 
 const MapView = ({ crimes }) => {
   const [crimeBounds, setCrimeBounds] = useState(null);
+  const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [selectedNeighborhood, setSelectedNeighborhood] = useState("");
+
+  // Get unique districts & neighborhoods
+  const districts = [...new Set(crimes.map((c) => c.District))];
+  const neighborhoods = [...new Set(
+    crimes
+      .filter((c) => !selectedDistrict || c.District === selectedDistrict)
+      .map((c) => c.Neighborhood)
+  )];
+
+  // Apply filtering
+  const filteredCrimes = crimes.filter(
+    (c) =>
+      (!selectedDistrict || c.District === selectedDistrict) &&
+      (!selectedNeighborhood || c.Neighborhood === selectedNeighborhood)
+  );
 
   // Color by CrimeType
   const getColor = (type) => {
@@ -64,54 +81,98 @@ const MapView = ({ crimes }) => {
     }
   };
 
-  // India bounds: [southWest, northEast]
+  // India bounds
   const indiaBounds = [
-    [6.5546079, 68.1113787],  // SW corner
-    [35.6745457, 97.395561]   // NE corner
+    [6.5546079, 68.1113787],
+    [35.6745457, 97.395561]
   ];
 
-  // Detect if on mobile
   const isMobile = window.innerWidth < 768;
 
   return (
-    <MapContainer
-      center={[20.5937, 78.9629]}
-      zoom={5}
-      style={{ height: "100%", width: "100%" }}
-      maxBounds={indiaBounds}
-      maxBoundsViscosity={1.0}
-      minZoom={5}
-      maxZoom={12}
-    >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    <div style={{ position: "relative", height: "100vh", width: "100%" }}>
+      {/* Filter Controls */}
+      <div
+        style={{
+          position: "absolute",
+          top: "10px",
+          left: "10px",
+          zIndex: 1000,
+          background: "white",
+          padding: "10px",
+          borderRadius: "8px",
+          boxShadow: "0px 2px 6px rgba(0,0,0,0.3)",
+        }}
+      >
+        <label>
+          District:{" "}
+          <select
+            value={selectedDistrict}
+            onChange={(e) => {
+              setSelectedDistrict(e.target.value);
+              setSelectedNeighborhood(""); // reset neighborhood
+            }}
+          >
+            <option value="">All</option>
+            {districts.map((d, idx) => (
+              <option key={idx} value={d}>{d}</option>
+            ))}
+          </select>
+        </label>
+        <br />
+        <label>
+          Neighborhood:{" "}
+          <select
+            value={selectedNeighborhood}
+            onChange={(e) => setSelectedNeighborhood(e.target.value)}
+          >
+            <option value="">All</option>
+            {neighborhoods.map((n, idx) => (
+              <option key={idx} value={n}>{n}</option>
+            ))}
+          </select>
+        </label>
+      </div>
 
-      {/* Auto-fit and track bounds */}
-      <FitBounds crimes={crimes} onBoundsChange={setCrimeBounds} />
+      <MapContainer
+        center={[20.5937, 78.9629]}
+        zoom={5}
+        style={{ height: "100%", width: "100%" }}
+        maxBounds={indiaBounds}
+        maxBoundsViscosity={1.0}
+        minZoom={5}
+        maxZoom={12}
+      >
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-      {/* Reset View Button */}
-      {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
+        {/* Auto-fit and track bounds */}
+        <FitBounds crimes={filteredCrimes} onBoundsChange={setCrimeBounds} />
 
-      {crimes.map((c, idx) => (
-        <CircleMarker
-          key={idx}
-          center={[c.Latitude, c.Longitude]}
-          radius={isMobile ? 10 : 6}
-          pathOptions={{
-            color: "#000", // black border for contrast
-            fillColor: getColor(c.CrimeType),
-            fillOpacity: 0.9,
-            weight: isMobile ? 3 : 2,
-          }}
-        >
-          <Popup>
-            <strong>{c.CrimeCode}</strong><br />
-            {c.CrimeType}<br />
-            {c.CrimeDateTime}<br />
-            {c.District} - {c.Neighborhood}
-          </Popup>
-        </CircleMarker>
-      ))}
-    </MapContainer>
+        {/* Reset View Button */}
+        {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
+
+        {filteredCrimes.map((c, idx) => (
+          <CircleMarker
+            key={idx}
+            center={[c.Latitude, c.Longitude]}
+            radius={isMobile ? 10 : 6}
+            pathOptions={{
+              color: "#000",
+              fillColor: getColor(c.CrimeType),
+              fillOpacity: 0.9,
+              weight: isMobile ? 3 : 2,
+            }}
+          >
+            <Popup>
+              <strong>{c.CrimeCode}</strong><br />
+              {c.CrimeType}<br />
+              {c.CrimeDateTime}<br />
+              {c.District} - {c.Neighborhood}
+            </Popup>
+          </CircleMarker>
+        ))}
+      </MapContainer>
+    </div>
   );
 };
 
