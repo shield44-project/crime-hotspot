@@ -1,9 +1,59 @@
-import React from 'react';
-import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+import React, { useEffect, useState } from "react";
+import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+
+// Auto-fit map bounds to crime markers
+const FitBounds = ({ crimes, onBoundsChange }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (crimes.length > 0) {
+      const bounds = crimes.map((c) => [c.Latitude, c.Longitude]);
+      map.fitBounds(bounds, { padding: [50, 50] });
+      if (onBoundsChange) onBoundsChange(bounds);
+    }
+  }, [crimes, map, onBoundsChange]);
+
+  return null;
+};
+
+// Reset button component
+const ResetViewButton = ({ bounds }) => {
+  const map = useMap();
+
+  const handleReset = () => {
+    if (bounds && bounds.length > 0) {
+      map.fitBounds(bounds, { padding: [50, 50] });
+    }
+  };
+
+  return (
+    <button
+      onClick={handleReset}
+      style={{
+        position: "absolute",
+        top: "10px",
+        right: "10px",
+        zIndex: 1000,
+        padding: "6px 12px",
+        background: "#000",
+        color: "#fff",
+        border: "none",
+        borderRadius: "6px",
+        cursor: "pointer",
+        fontSize: "14px",
+        fontWeight: "bold",
+      }}
+    >
+      Reset View
+    </button>
+  );
+};
 
 const MapView = ({ crimes }) => {
-  // Color by CrimeType (not CrimeCode)
+  const [crimeBounds, setCrimeBounds] = useState(null);
+
+  // Color by CrimeType
   const getColor = (type) => {
     switch (type) {
       case "Theft": return "red";
@@ -13,10 +63,6 @@ const MapView = ({ crimes }) => {
       default: return "green";
     }
   };
-
-  const center = crimes.length
-    ? [crimes[0].Latitude, crimes[0].Longitude]
-    : [20.5937, 78.9629]; // fallback: India center
 
   // India bounds: [southWest, northEast]
   const indiaBounds = [
@@ -29,28 +75,32 @@ const MapView = ({ crimes }) => {
 
   return (
     <MapContainer
-      center={center}
+      center={[20.5937, 78.9629]}
       zoom={5}
-      style={{ height: '100%', width: '100%' }}
+      style={{ height: "100%", width: "100%" }}
       maxBounds={indiaBounds}
       maxBoundsViscosity={1.0}
       minZoom={5}
       maxZoom={12}
     >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+      {/* Auto-fit and track bounds */}
+      <FitBounds crimes={crimes} onBoundsChange={setCrimeBounds} />
+
+      {/* Reset View Button */}
+      {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
 
       {crimes.map((c, idx) => (
         <CircleMarker
           key={idx}
           center={[c.Latitude, c.Longitude]}
-          radius={isMobile ? 10 : 6} // larger on mobile
+          radius={isMobile ? 10 : 6}
           pathOptions={{
             color: "#000", // black border for contrast
             fillColor: getColor(c.CrimeType),
             fillOpacity: 0.9,
-            weight: isMobile ? 3 : 2, // thicker border on mobile
+            weight: isMobile ? 3 : 2,
           }}
         >
           <Popup>
