@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaf
 import "leaflet/dist/leaflet.css";
 import "./MapView.css";  // ✅ Import the CSS file
 
+
 // Auto-fit map bounds to crime markers
 const FitBounds = ({ crimes, onBoundsChange }) => {
   const map = useMap();
@@ -91,45 +92,47 @@ const MapView = ({ crimes }) => {
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div style={{ position: "relative", height: "100vh", width: "100%" }}>
-      {/* Filter Controls */}
-      <div
-        style={{
-          position: "absolute",
-          top: "10px",
-          left: "10px",
-          zIndex: 1000,
-          background: "white",
-          padding: "10px",
-          borderRadius: "8px",
-          boxShadow: "0px 2px 6px rgba(0,0,0,0.3)",
-        }}
-      >
+    <div className="map-container">
+      {/* Toggle Button (only visible on mobile) */}
+      {isMobile && (
+        <button
+          className="toggle-filters"
+          onClick={() => setShowFilters((prev) => !prev)}
+        >
+          {showFilters ? "✖" : "☰"}
+        </button>
+      )}
+
+      {/* Filter Panel */}
+      <div className={`filter-panel ${isMobile && !showFilters ? "hidden" : ""}`}>
         <label>
-          District:{" "}
+          District:
           <select
             value={selectedDistrict}
             onChange={(e) => {
               setSelectedDistrict(e.target.value);
-              setSelectedNeighborhood(""); // reset neighborhood
+              setSelectedNeighborhood("");
             }}
           >
             <option value="">All</option>
             {districts.map((d, idx) => (
-              <option key={idx} value={d}>{d}</option>
+              <option key={idx} value={d}>
+                {d}
+              </option>
             ))}
           </select>
         </label>
-        <br />
         <label>
-          Neighborhood:{" "}
+          Neighborhood:
           <select
             value={selectedNeighborhood}
             onChange={(e) => setSelectedNeighborhood(e.target.value)}
           >
             <option value="">All</option>
             {neighborhoods.map((n, idx) => (
-              <option key={idx} value={n}>{n}</option>
+              <option key={idx} value={n}>
+                {n}
+              </option>
             ))}
           </select>
         </label>
