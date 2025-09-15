@@ -1,0 +1,73 @@
+Latitude,Longitude,CrimeCode,CrimeType,CrimeDateTime,District,Neighborhood
+28.6139,77.2090,Theft,Stolen bicycle,2025-01-03 14:23,DistrictA,Neighborhood1
+28.7041,77.1025,Assault,Physical assault,2025-02-15 09:45,DistrictB,Neighborhood2
+28.5355,77.3910,Burglary,Break-in,2025-03-12 18:30,DistrictC,Neighborhood3
+28.4595,77.0266,Theft,Pickpocketing,2025-04-20 20:10,DistrictA,Neighborhood4
+28.4089,77.3178,Assault,Shoving fight,2025-05-05 16:55,DistrictB,Neighborhood5
+28.6692,77.4538,Burglary,Forced entry,2025-06-10 12:15,DistrictC,Neighborhood6
+28.5800,77.2500,Theft,Robbery,2025-07-22 15:20,DistrictA,Neighborhood7
+28.7200,77.1000,Assault,Attack with stick,2025-08-18 19:10,DistrictB,Neighborhood8
+28.6000,77.2000,Burglary,Home invasion,2025-09-09 21:00,DistrictC,Neighborhood9
+28.6500,77.3000,Theft,Snatching,2025-10-10 17:45,DistrictA,Neighborhood10
+28.6100,77.2200,Theft,Stolen wallet,2025-01-15 11:20,DistrictB,Neighborhood1
+28.7000,77.1200,Assault,Push and shove,2025-02-21 14:55,DistrictC,Neighborhood2
+28.5400,77.4000,Burglary,Warehouse break-in,2025-03-30 13:10,DistrictA,Neighborhood3
+28.4600,77.0300,Theft,Bag snatching,2025-04-17 16:40,DistrictB,Neighborhood4
+28.4100,77.3200,Assault,Fist fight,2025-05-23 18:30,DistrictC,Neighborhood5
+28.6750,77.4650,Burglary,Apartment break-in,2025-06-05 20:20,DistrictA,Neighborhood6
+28.5850,77.2650,Theft,Robbed at ATM,2025-07-12 09:10,DistrictB,Neighborhood7
+28.7350,77.1150,Assault,Assault with stick,2025-08-01 21:45,DistrictC,Neighborhood8
+28.6080,77.2080,Burglary,Garage break-in,2025-09-14 13:15,DistrictA,Neighborhood9
+28.6520,77.2980,Theft,Wallet snatching,2025-10-06 15:05,DistrictB,Neighborhood10
+28.6180,77.2120,Theft,Mobile theft,2025-01-22 17:40,DistrictC,Neighborhood1
+28.7020,77.1180,Assault,Fight in park,2025-02-11 19:25,DistrictA,Neighborhood2
+28.5480,77.3980,Burglary,Shop robbery,2025-03-28 20:50,DistrictB,Neighborhood3
+28.4680,77.0380,Theft,Bicycle theft,2025-04-16 08:30,DistrictC,Neighborhood4
+28.4180,77.3280,Assault,Bar fight,2025-05-20 21:15,DistrictA,Neighborhood5
+28.6800,77.4700,Burglary,Office robbery,2025-06-11 14:40,DistrictB,Neighborhood6
+28.5920,77.2700,Theft,Pickpocketed purse,2025-07-09 18:00,DistrictC,Neighborhood7
+28.7380,77.1200,Assault,Street assault,2025-08-19 16:10,DistrictA,Neighborhood8
+28.6120,77.2090,Burglary,House break-in,2025-09-05 20:25,DistrictB,Neighborhood9
+28.6540,77.3100,Theft,Stolen watch,2025-10-13 12:15,DistrictC,Neighborhood10
+28.6200,77.2140,Theft,Snatched bag,2025-01-06 10:50,DistrictA,Neighborhood1
+28.7070,77.1220,Assault,Attack in market,2025-02-19 15:35,DistrictB,Neighborhood2
+28.5500,77.4000,Burglary,Warehouse robbery,2025-03-27 17:20,DistrictC,Neighborhood3
+28.4700,77.0400,Theft,Wallet stolen,2025-04-08 19:45,DistrictA,Neighborhood4
+28.4200,77.3300,Assault,Street fight,2025-05-14 21:10,DistrictB,Neighborhood5
+28.6800,77.4750,Burglary,Apartment robbery,2025-06-25 13:50,DistrictC,Neighborhood6
+28.5950,77.2750,Theft,Bicycle snatching,2025-07-30 18:30,DistrictA,Neighborhood7
+28.7400,77.1250,Assault,Fist fight,2025-08-21 20:05,DistrictB,Neighborhood8
+28.6155,77.2100,Burglary,Shop break-in,2025-09-17 12:40,DistrictC,Neighborhood9
+28.6560,77.3120,Theft,Mobile snatching,2025-10-05 15:50,DistrictA,Neighborhood10
+28.6220,77.2160,Theft,Stolen jewelry,2025-01-09 11:25,DistrictB,Neighborhood1
+28.6050,77.2150,Assault,Physical fight,2025-02-13 13:15,DistrictC,Neighborhood2
+28.5400,77.3950,Burglary,Store break-in,2025-03-08 17:45,DistrictA,Neighborhood3
+28.4650,77.0350,Theft,Pickpocket incident,2025-04-26 20:20,DistrictB,Neighborhood4
+28.4150,77.3250,Assault,Street fight,2025-05-11 21:50,DistrictC,Neighborhood5
+28.6750,77.4650,Burglary,Apartment break-in,2025-06-18 12:30,DistrictA,Neighborhood6
+28.5850,77.2650,Theft,Robbed at ATM,2025-07-23 16:40,DistrictB,Neighborhood7
+28.7350,77.1150,Assault,Assault with stick,2025-08-02 19:15,DistrictC,Neighborhood8
+28.6080,77.2080,Burglary,Garage break-in,2025-09-12 13:35,DistrictA,Neighborhood9
+28.6520,77.2980,Theft,Wallet snatching,2025-10-07 15:10,DistrictB,Neighborhood10
+28.6180,77.2120,Theft,Mobile theft,2025-01-15 17:05,DistrictC,Neighborhood1
+28.7020,77.1180,Assault,Fight in park,2025-02-27 19:20,DistrictA,Neighborhood2
+28.5480,77.3980,Burglary,Shop robbery,2025-03-19 20:50,DistrictB,Neighborhood3
+28.4680,77.0380,Theft,Bicycle theft,2025-04-10 08:15,DistrictC,Neighborhood4
+28.4180,77.3280,Assault,Bar fight,2025-05-05 21:00,DistrictA,Neighborhood5
+28.6800,77.4700,Burglary,Office robbery,2025-06-20 14:20,DistrictB,Neighborhood6
+28.5920,77.2700,Theft,Pickpocketed purse,2025-07-15 18:35,DistrictC,Neighborhood7
+28.7380,77.1200,Assault,Street assault,2025-08-28 16:50,DistrictA,Neighborhood8
+28.6120,77.2090,Burglary,House break-in,2025-09-08 20:10,DistrictB,Neighborhood9
+28.6540,77.3100,Theft,Stolen watch,2025-10-14 12:45,DistrictC,Neighborhood10
+28.6200,77.2140,Theft,Snatched bag,2025-01-21 10:30,DistrictA,Neighborhood1
+28.7070,77.1220,Assault,Attack in market,2025-02-18 15:25,DistrictB,Neighborhood2
+28.5500,77.4000,Burglary,Warehouse robbery,2025-03-25 17:10,DistrictC,Neighborhood3
+28.4700,77.0400,Theft,Wallet stolen,2025-04-06 19:35,DistrictA,Neighborhood4
+28.4200,77.3300,Assault,Street fight,2025-05-14 21:00,DistrictB,Neighborhood5
+28.6800,77.4750,Burglary,Apartment robbery,2025-06-29 13:40,DistrictC,Neighborhood6
+28.5950,77.2750,Theft,Bicycle snatching,2025-07-31 18:20,DistrictA,Neighborhood7
+28.7400,77.1250,Assault,Fist fight,2025-08-22 20:00,DistrictB,Neighborhood8
+28.6155,77.2100,Burglary,Shop break-in,2025-09-18 12:25,DistrictC,Neighborhood9
+28.6560,77.3120,Theft,Mobile snatching,2025-10-08 15:40,DistrictA,Neighborhood10
+28.6220,77.2160,Theft,Stolen jewelry,2025-01-12 11:00,DistrictB,Neighborhood1
+28.6050,77.2150,Assault,Physical fight,2025-02-16 13:20,DistrictC,Neighborhood2
