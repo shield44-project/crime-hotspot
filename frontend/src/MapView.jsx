@@ -56,6 +56,7 @@ const MapView = ({ crimes }) => {
   const [crimeBounds, setCrimeBounds] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState("");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState("");
+  const [showFilters, setShowFilters] = useState(false); // ✅ Added this line
 
   // Get unique districts & neighborhoods
   const districts = [...new Set(crimes.map((c) => c.District))];
@@ -83,7 +84,6 @@ const MapView = ({ crimes }) => {
     }
   };
 
-  // India bounds
   const indiaBounds = [
     [6.5546079, 68.1113787],
     [35.6745457, 97.395561]
@@ -149,10 +149,7 @@ const MapView = ({ crimes }) => {
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-        {/* Auto-fit and track bounds */}
         <FitBounds crimes={filteredCrimes} onBoundsChange={setCrimeBounds} />
-
-        {/* Reset View Button */}
         {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
 
         {filteredCrimes.map((c, idx) => (
