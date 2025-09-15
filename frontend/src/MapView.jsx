@@ -42,13 +42,14 @@ const MapView = ({ crimes }) => {
          (!selectedNeighborhood || c.Neighborhood === selectedNeighborhood)
   );
 
+  // Ensure all types return valid colors
   const getColor = type => {
-    switch (type) {
-      case "Theft": return "red";
-      case "Assault": return "orange";
-      case "Burglary": return "blue";
-      case "Robbery": return "purple";
-      default: return "green";
+    switch ((type || "").toLowerCase()) {
+      case "theft": return "#e74c3c"; // red
+      case "assault": return "#e67e22"; // orange
+      case "burglary": return "#3498db"; // blue
+      case "robbery": return "#8e44ad"; // purple
+      default: return "#2ecc71"; // green
     }
   };
 
@@ -86,10 +87,10 @@ const MapView = ({ crimes }) => {
       <div className="crime-stats-panel">
         <h3>Crime Stats</h3>
         <p>Total Crimes: {filteredCrimes.length}</p>
-        <p>Theft: {filteredCrimes.filter(c => c.CrimeType === "Theft").length}</p>
-        <p>Assault: {filteredCrimes.filter(c => c.CrimeType === "Assault").length}</p>
-        <p>Burglary: {filteredCrimes.filter(c => c.CrimeType === "Burglary").length}</p>
-        <p>Robbery: {filteredCrimes.filter(c => c.CrimeType === "Robbery").length}</p>
+        <p>Theft: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "theft").length}</p>
+        <p>Assault: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "assault").length}</p>
+        <p>Burglary: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "burglary").length}</p>
+        <p>Robbery: {filteredCrimes.filter(c => (c.CrimeType || "").toLowerCase() === "robbery").length}</p>
       </div>
 
       <MapContainer
@@ -104,12 +105,18 @@ const MapView = ({ crimes }) => {
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <FitBounds crimes={filteredCrimes} onBoundsChange={setCrimeBounds} />
         {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
+
         {filteredCrimes.map((c, idx) => (
           <CircleMarker
             key={idx}
             center={[c.Latitude, c.Longitude]}
             radius={isMobile ? 10 : 6}
-            pathOptions={{ color: "#000", fillColor: getColor(c.CrimeType), fillOpacity: 0.9, weight: isMobile ? 3 : 2 }}
+            pathOptions={{
+              color: "#000", // border
+              fillColor: getColor(c.CrimeType), // fill color
+              fillOpacity: 0.8,
+              weight: isMobile ? 3 : 2
+            }}
           >
             <Popup>
               <strong>{c.CrimeCode}</strong><br/>
