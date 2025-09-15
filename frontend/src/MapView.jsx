@@ -28,9 +28,6 @@ const ResetViewButton = ({ bounds }) => {
 
 const MapView = ({ crimes }) => {
   const [crimeBounds, setCrimeBounds] = useState(null);
-  const [selectedDistrict, setSelectedDistrict] = useState("");
-  const [selectedNeighborhood, setSelectedNeighborhood] = useState("");
-  const [showFilters, setShowFilters] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -39,65 +36,20 @@ const MapView = ({ crimes }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const districts = [...new Set(crimes.map(c => c.District))];
-  const neighborhoods = [...new Set(
-    crimes.filter(c => !selectedDistrict || c.District === selectedDistrict)
-          .map(c => c.Neighborhood)
-  )];
-
-  const filteredCrimes = crimes.filter(
-    c => (!selectedDistrict || c.District === selectedDistrict) &&
-         (!selectedNeighborhood || c.Neighborhood === selectedNeighborhood)
-  );
-
   // Ensure all types return valid colors
   const getColor = type => {
     switch ((type || "").toLowerCase()) {
-      case "theft": return "#e74c3c"; // red
-      case "assault": return "#e67e22"; // orange
-      case "burglary": return "#3498db"; // blue
-      case "robbery": return "#8e44ad"; // purple
-      default: return "#2ecc71"; // green
+      case "theft": return "#ff4757"; // bright red
+      case "assault": return "#ffa726"; // bright orange
+      case "burglary": return "#42a5f5"; // bright blue
+      case "robbery": return "#ab47bc"; // bright purple
+      default: return "#66bb6a"; // bright green
     }
   };
 
   return (
     <div className="map-container">
-      {/* Toggle filters button */}
-      {isMobile && (
-        <button className="toggle-filters" onClick={() => setShowFilters(prev => !prev)}>
-          {showFilters ? "✖" : "☰"}
-        </button>
-      )}
 
-      {/* Sliding Filters Panel */}
-      <div className={`filter-panel ${showFilters ? "open" : ""}`}>
-        <h3>Filters</h3>
-        <label>
-          District:
-          <select value={selectedDistrict} onChange={e => { setSelectedDistrict(e.target.value); setSelectedNeighborhood(""); }}>
-            <option value="">All</option>
-            {districts.map((d, idx) => <option key={idx} value={d}>{d}</option>)}
-          </select>
-        </label>
-        <label>
-          Neighborhood:
-          <select value={selectedNeighborhood} onChange={e => setSelectedNeighborhood(e.target.value)}>
-            <option value="">All</option>
-            {neighborhoods.map((n, idx) => <option key={idx} value={n}>{n}</option>)}
-          </select>
-        </label>
-      </div>
-
-      {/* Floating Crime Stats */}
-      <div className="crime-stats-panel">
-        <h3>Crime Stats</h3>
-        <p>Total Crimes: {filteredCrimes.length}</p>
-        <p>Theft: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "theft").length}</p>
-        <p>Assault: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "assault").length}</p>
-        <p>Burglary: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "burglary").length}</p>
-        <p>Robbery: {filteredCrimes.filter(c => (c.CrimeCode || "").toLowerCase() === "robbery").length}</p>
-      </div>
 
       <MapContainer
         center={[20.5937, 78.9629]}
@@ -109,20 +61,20 @@ const MapView = ({ crimes }) => {
         maxZoom={12}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <FitBounds crimes={filteredCrimes} onBoundsChange={setCrimeBounds} />
+        <FitBounds crimes={crimes} onBoundsChange={setCrimeBounds} />
         {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
 
         <MarkerClusterGroup>
-          {filteredCrimes.map((c, idx) => (
+          {crimes.map((c, idx) => (
             <CircleMarker
               key={idx}
               center={[c.Latitude, c.Longitude]}
-              radius={isMobile ? 10 : 6}
+              radius={isMobile ? 12 : 8}
               pathOptions={{
-                color: "#000", // border
+                color: "#fff", // white border for visibility
                 fillColor: getColor(c.CrimeCode), // fill color
-                fillOpacity: 0.8,
-                weight: isMobile ? 3 : 2
+                fillOpacity: 0.9,
+                weight: isMobile ? 4 : 3
               }}
             >
               <Popup>

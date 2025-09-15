@@ -28,13 +28,9 @@ const App = () => {
   }, [filters]);
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
-      <div style={{ flex: 1, padding: "20px", overflowY: "auto", backgroundColor: "#f9f9f9" }}>
-              <Sidebar filters={filters} setFilters={setFilters} crimes={crimes} />
-        <Filters filters={filters} setFilters={setFilters} crimes={crimes} />
-        <CrimeStats crimes={crimes} />
-      </div>
-      <div style={{ flex: 2 }}>
+    <div style={{ display: "flex", height: "100vh", background: "#000000" }}>
+      <Sidebar filters={filters} setFilters={setFilters} crimes={crimes} />
+      <div style={{ flex: 1, position: "relative" }}>
         <MapView crimes={crimes} />
       </div>
     </div>

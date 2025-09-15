@@ -1,39 +1,55 @@
-/* Sidebar Crime Stats */
+/* Stats container */
 .stats-container {
-  background: #fdfdfd;
-  padding: 20px;
-  border-left: 1px solid #ddd;
-  height: 100%;
-  width: 280px;
-  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-  font-family: "Arial", sans-serif;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
 /* Title */
 .stats-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 6px;
-  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
 }
 
 /* Total count */
 .stats-total {
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 14px;
-  color: #555;
+  margin-bottom: 12px;
+  color: #cccccc;
+  padding: 12px;
+  background: #333333;
+  border-radius: 8px;
+  border: 1px solid #666666;
+}
+
+/* Export button */
+.export-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.export-btn:hover {
+  background: #cccccc;
+  transform: scale(1.02);
 }
 
 /* Chart wrapper */
 .chart-wrapper {
-  background: #fafafa;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #eee;
+  background: #222222;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #444444;
 }
 
 /* 📱 Mobile Sidebar */

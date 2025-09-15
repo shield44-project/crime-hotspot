@@ -1,54 +1,53 @@
-/* Sidebar Filter Panel */
+/* Filters container */
 .filters-container {
-  background: #f9f9f9;
-  padding: 20px;
-  border-right: 1px solid #ddd;
-  height: 100%;
-  width: 280px;
-  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-  font-family: "Arial", sans-serif;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
 /* Title */
 .filters-title {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 16px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 6px;
-  color: #333;
+  color: #f1f5f9;
 }
 
 /* Each group */
 .filter-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 /* Labels */
 .filter-label {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 500;
   margin-bottom: 6px;
-  color: #444;
+  color: #cccccc;
 }
 
 /* Inputs */
 .filter-input {
-  padding: 8px;
-  border: 1px solid #aaa;
-  border-radius: 6px;
+  padding: 10px 12px;
+  border: 1px solid #666666;
+  border-radius: 8px;
   font-size: 14px;
   outline: none;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background: #333333;
+  color: #ffffff;
+  transition: all 0.2s ease;
 }
 
-/* Focus effect */
 .filter-input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  background: #444444;
+}
+
+.filter-input option {
+  background: #333333;
+  color: #ffffff;
 }
 
 /* 📱 Mobile Sidebar */

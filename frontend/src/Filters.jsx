@@ -10,9 +10,30 @@ const Filters = ({ filters, setFilters, crimes }) => {
   const districts = [...new Set(crimes.map(c => c.District))].sort();
   const neighborhoods = [...new Set(crimes.map(c => c.Neighborhood))].sort();
 
+  // For search, perhaps filter districts and neighborhoods based on search term
+  // But for simplicity, add a search input that sets District or Neighborhood
+
   return (
     <div className="filters-container">
       <h3 className="filters-title">Filters</h3>
+
+      <div className="filter-group">
+        <label className="filter-label">Search Location</label>
+        <input
+          className="filter-input"
+          type="text"
+          placeholder="Search district or neighborhood..."
+          onChange={e => {
+            // Simple search: set District if matches, else Neighborhood
+            const value = e.target.value;
+            if (districts.includes(value)) {
+              setFilters({ ...filters, District: value, Neighborhood: "" });
+            } else if (neighborhoods.includes(value)) {
+              setFilters({ ...filters, Neighborhood: value, District: "" });
+            }
+          }}
+        />
+      </div>
 
       <div className="filter-group">
         <label className="filter-label">Crime Type</label>

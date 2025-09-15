@@ -1,43 +1,42 @@
 import React, { useState } from "react";
 import Filters from "./Filters";
 import CrimeStats from "./CrimeStats";
+import Legend from "./Legend";
 import "./Sidebar.css";
 
 const Sidebar = ({ filters, setFilters, crimes }) => {
-  const [activeTab, setActiveTab] = useState("filters");
   const [collapsed, setCollapsed] = useState(false);
 
   return (
     <div className={`sidebar ${collapsed ? "collapsed" : ""}`}>
-      {/* Toggle button */}
-      <button className="collapse-btn" onClick={() => setCollapsed(!collapsed)}>
-        {collapsed ? "➡️" : "⬅️"}
-      </button>
+      {/* Header */}
+      <div className="sidebar-header">
+        <h2>Crime Dashboard</h2>
+        <button className="collapse-btn" onClick={() => setCollapsed(!collapsed)}>
+          {collapsed ? "→" : "←"}
+        </button>
+      </div>
 
       {!collapsed && (
-        <>
-          {/* Tabs */}
-          <div className="sidebar-tabs">
-            <button
-              className={activeTab === "filters" ? "active" : ""}
-              onClick={() => setActiveTab("filters")}
-            >
-              Filters
-            </button>
-            <button
-              className={activeTab === "stats" ? "active" : ""}
-              onClick={() => setActiveTab("stats")}
-            >
-              Crime Stats
-            </button>
+        <div className="sidebar-content">
+          {/* Filters Section */}
+          <div className="sidebar-section">
+            <h3>🔍 Filters</h3>
+            <Filters filters={filters} setFilters={setFilters} crimes={crimes} />
           </div>
 
-          {/* Tab Content */}
-          <div className="sidebar-content">
-            {activeTab === "filters" && <Filters filters={filters} setFilters={setFilters} crimes={crimes} />}
-            {activeTab === "stats" && <CrimeStats crimes={crimes} />}
+          {/* Stats Section */}
+          <div className="sidebar-section">
+            <h3>📊 Statistics</h3>
+            <CrimeStats crimes={crimes} />
           </div>
-        </>
+
+          {/* Legend Section */}
+          <div className="sidebar-section">
+            <h3>🗺️ Legend</h3>
+            <Legend />
+          </div>
+        </div>
       )}
     </div>
   );

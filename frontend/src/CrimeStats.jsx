@@ -13,10 +13,27 @@ const CrimeStats = ({ crimes }) => {
     Count: counts[key],
   }));
 
+  const exportToCSV = () => {
+    const headers = ["Latitude", "Longitude", "CrimeCode", "CrimeType", "CrimeDateTime", "District", "Neighborhood"];
+    const csvContent = [
+      headers.join(","),
+      ...crimes.map(c => [c.Latitude, c.Longitude, c.CrimeCode, c.CrimeType, c.CrimeDateTime, c.District, c.Neighborhood].join(","))
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "filtered_crimes.csv";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="stats-container">
       <h3 className="stats-title">Crime Stats</h3>
       <p className="stats-total">Total Crimes: {crimes.length}</p>
+      <button className="export-btn" onClick={exportToCSV}>📥 Export CSV</button>
 
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height={220}>
@@ -24,7 +41,7 @@ const CrimeStats = ({ crimes }) => {
             <XAxis dataKey="CrimeCode" />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="Count" fill="#3498db" radius={[6, 6, 0, 0]} />
+            <Bar dataKey="Count" fill="#ffffff" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
