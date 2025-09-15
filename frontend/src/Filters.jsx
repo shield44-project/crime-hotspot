@@ -1,4 +1,5 @@
 import React from "react";
+import "./Filters.css"; // ✅ add external CSS
 
 const Filters = ({ filters, setFilters }) => {
   const handleChange = e => {
@@ -6,27 +7,59 @@ const Filters = ({ filters, setFilters }) => {
   };
 
   return (
-    <div style={{ marginBottom: "20px" }}>
-      <h3>Filters</h3>
-      <div>
-        <label>Crime Type: </label>
-        <input name="CrimeCode" value={filters.CrimeCode} onChange={handleChange} />
+    <div className="filters-container">
+      <h3 className="filters-title">Filters</h3>
+
+      <div className="filter-group">
+        <label className="filter-label">Crime Type</label>
+        <input
+          className="filter-input"
+          name="CrimeCode"
+          value={filters.CrimeCode}
+          onChange={handleChange}
+        />
       </div>
-      <div>
-        <label>District: </label>
-        <input name="District" value={filters.District} onChange={handleChange} />
+
+      <div className="filter-group">
+        <label className="filter-label">District</label>
+        <input
+          className="filter-input"
+          name="District"
+          value={filters.District}
+          onChange={handleChange}
+        />
       </div>
-      <div>
-        <label>Neighborhood: </label>
-        <input name="Neighborhood" value={filters.Neighborhood} onChange={handleChange} />
+
+      <div className="filter-group">
+        <label className="filter-label">Neighborhood</label>
+        <input
+          className="filter-input"
+          name="Neighborhood"
+          value={filters.Neighborhood}
+          onChange={handleChange}
+        />
       </div>
-      <div>
-        <label>Start Date: </label>
-        <input type="date" name="StartDate" value={filters.StartDate} onChange={handleChange} />
+
+      <div className="filter-group">
+        <label className="filter-label">Start Date</label>
+        <input
+          className="filter-input"
+          type="date"
+          name="StartDate"
+          value={filters.StartDate}
+          onChange={handleChange}
+        />
       </div>
-      <div>
-        <label>End Date: </label>
-        <input type="date" name="EndDate" value={filters.EndDate} onChange={handleChange} />
+
+      <div className="filter-group">
+        <label className="filter-label">End Date</label>
+        <input
+          className="filter-input"
+          type="date"
+          name="EndDate"
+          value={filters.EndDate}
+          onChange={handleChange}
+        />
       </div>
     </div>
   );

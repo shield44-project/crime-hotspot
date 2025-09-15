@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MapView from "./MapView";
 import CrimeStats from "./CrimeStats";
 import Filters from "./Filters";
+import Sidebar from "./Sidebar";
 
 const App = () => {
   const [crimes, setCrimes] = useState([]);
@@ -29,6 +30,7 @@ const App = () => {
   return (
     <div style={{ display: "flex", height: "100vh" }}>
       <div style={{ flex: 1, padding: "20px", overflowY: "auto", backgroundColor: "#f9f9f9" }}>
+              <Sidebar filters={filters} setFilters={setFilters} crimes={crimes} />
         <Filters filters={filters} setFilters={setFilters} crimes={crimes} />
         <CrimeStats crimes={crimes} />
       </div>

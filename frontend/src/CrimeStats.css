@@ -1,0 +1,48 @@
+/* Sidebar Crime Stats */
+.stats-container {
+  background: #fdfdfd;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  height: 100%;
+  width: 280px;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  font-family: "Arial", sans-serif;
+}
+
+/* Title */
+.stats-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  color: #333;
+}
+
+/* Total count */
+.stats-total {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: #555;
+}
+
+/* Chart wrapper */
+.chart-wrapper {
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+/* 📱 Mobile Sidebar */
+@media (max-width: 768px) {
+  .stats-container {
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+  }
+}
