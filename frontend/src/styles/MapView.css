@@ -1,130 +1,158 @@
-/* MapView.css */
-
 .map-container {
   position: relative;
   height: 100vh;
   width: 100%;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Filter Panel (default = desktop) */
-.filter-panel {
-  position: absolute;
+/* Toggle Filters Button */
+.toggle-filters {
+  position: fixed;
   top: 10px;
-  left: 50%;
-  transform: translateX(-50%); /* center horizontally */
-  z-index: 1000;
-  background: #ffffff;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
+  left: 10px;
+  z-index: 1100;
+  background: #1f2937; /* dark gray */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.toggle-filters:hover {
+  background: #374151; /* slightly lighter */
+  transform: scale(1.05);
+}
+
+/* Compact Filters Panel */
+.filter-panel {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 1050;
+  width: 220px; /* compact width */
+  max-height: 80%;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6); /* subtle gradient */
+  padding: 15px 12px;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 260px; /* slightly wider */
-  text-align: center; /* center labels and text */
+  gap: 12px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-size: 13px;
+}
+
+.filter-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.filter-panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #1f2937;
+  text-align: center;
+  font-weight: 600;
 }
 
 .filter-panel label {
-  font-weight: bold;
-  color: #333;
   display: flex;
   flex-direction: column;
-  font-size: 13px;
-  align-items: center; /* center content */
+  font-weight: 500;
+  color: #374151;
 }
 
 .filter-panel select {
-  width: 90%;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
   margin-top: 4px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
   outline: none;
-  text-align: center; /* center dropdown text */
+  background: #f9fafb;
+  color: #111827;
+  transition: all 0.2s ease;
 }
 
 .filter-panel select:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  border-color: #3b82f6;
+  box-shadow: 0 0 4px rgba(59, 130, 246, 0.5);
 }
 
-/* Reset button */
-.reset-button {
-  position: absolute;
-  top: 10px;
+/* Compact Crime Stats Panel */
+.crime-stats-panel {
+  position: fixed;
+  top: 60px;
   right: 10px;
   z-index: 1000;
+  width: 160px; /* smaller panel */
+  background: #1f2937;
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-size: 13px;
+}
+
+.crime-stats-panel h3 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.crime-stats-panel p {
+  margin: 4px 0;
+  line-height: 1.3;
+}
+
+/* Reset Button */
+.reset-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1100;
   padding: 6px 12px;
-  background: #000;
+  background: #1f2937;
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-  transition: background 0.2s ease-in-out;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
 }
 
 .reset-button:hover {
-  background: #444;
+  background: #374151;
+  transform: scale(1.05);
 }
 
-/* 📱 Mobile Styles */
-@media (max-width: 768px) {
+/* Mobile Styles */
+@media(max-width: 768px) {
   .filter-panel {
-    position: fixed;
-    top: 50px; /* push down below toggle button */
+    width: 80%;
+    top: 60px;
+    left: 0;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .crime-stats-panel {
+    width: 90%;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 0;
-    flex-direction: column; /* stack on mobile */
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-    padding: 10px;
-    font-size: 12px;
-    gap: 10px;
-  }
-
-  .filter-panel.hidden {
-    display: none;
-  }
-
-  .filter-panel label {
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-
-  .filter-panel select {
-    width: 100%;
-    min-width: 140px;
-    font-size: 13px;
-  }
-
-  .reset-button {
     top: auto;
-    bottom: 15px;
-    right: 15px;
-    padding: 8px 14px;
-    font-size: 12px;
+    bottom: 80px;
+    text-align: center;
   }
 
-  /* Toggle Button */
   .toggle-filters {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1100;
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 6px 10px;
     font-size: 16px;
-    cursor: pointer;
+    padding: 6px 10px;
   }
 }
