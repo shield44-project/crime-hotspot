@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import "./MapView.css";  // ✅ Import the CSS file
 
 // Auto-fit map bounds to crime markers
 const FitBounds = ({ crimes, onBoundsChange }) => {
