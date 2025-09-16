@@ -4,20 +4,43 @@ import "./CrimeStats.css"; // ✅ add external CSS
 
 const CrimeStats = ({ crimes }) => {
   const counts = crimes.reduce((acc, c) => {
-    acc[c.CrimeCode] = (acc[c.CrimeCode] || 0) + 1;
+    const k = c.CrimeType || c.CrimeCode || "Unknown";
+    acc[k] = (acc[k] || 0) + 1;
     return acc;
   }, {});
 
-  const data = Object.keys(counts).map(key => ({
-    CrimeCode: key,
+  const data = Object.keys(counts).map((key) => ({
+    CrimeType: key,
     Count: counts[key],
   }));
 
   const exportToCSV = () => {
-    const headers = ["Latitude", "Longitude", "CrimeCode", "CrimeType", "CrimeDateTime", "District", "Neighborhood"];
+    const headers = [
+      "Latitude",
+      "Longitude",
+      "CrimeCode",
+      "CrimeType",
+      "CrimeMode",
+      "CrimeDescription",
+      "Time",
+      "Place",
+      "CrimeDomain",
+    ];
     const csvContent = [
       headers.join(","),
-      ...crimes.map(c => [c.Latitude, c.Longitude, c.CrimeCode, c.CrimeType, c.CrimeDateTime, c.District, c.Neighborhood].join(","))
+      ...crimes.map((c) =>
+        [
+          c.Latitude,
+          c.Longitude,
+          c.CrimeCode,
+          c.CrimeType,
+          c.CrimeMode,
+          JSON.stringify(c.CrimeDescription || ""),
+          c.Time,
+          JSON.stringify(c.Place || ""),
+          c.CrimeDomain,
+        ].join(",")
+      ),
     ].join("\n");
 
     const blob = new Blob([csvContent], { type: "text/csv" });
@@ -38,7 +61,7 @@ const CrimeStats = ({ crimes }) => {
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height={220}>
           <BarChart data={data}>
-            <XAxis dataKey="CrimeCode" />
+            <XAxis dataKey="CrimeType" />
             <YAxis />
             <Tooltip />
             <Bar dataKey="Count" fill="#ffffff" radius={[6, 6, 0, 0]} />

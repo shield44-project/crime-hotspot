@@ -2,96 +2,210 @@ import React from "react";
 import "./Filters.css"; // ✅ add external CSS
 
 const Filters = ({ filters, setFilters, crimes }) => {
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
   };
 
-  const crimeCodes = [...new Set(crimes.map(c => c.CrimeCode))].sort();
-  const districts = [...new Set(crimes.map(c => c.District))].sort();
-  const neighborhoods = [...new Set(crimes.map(c => c.Neighborhood))].sort();
+  const uniq = (arr) => Array.from(new Set(arr.filter(Boolean))).sort();
 
-  // For search, perhaps filter districts and neighborhoods based on search term
-  // But for simplicity, add a search input that sets District or Neighborhood
+  const crimeCodes = uniq(crimes.map((c) => c.CrimeCode));
+  const crimeTypes = uniq(crimes.map((c) => c.CrimeType));
+  const crimeModes = uniq(crimes.map((c) => c.CrimeMode));
+  const domains = uniq(crimes.map((c) => c.CrimeDomain));
+  const places = uniq(crimes.map((c) => c.Place));
 
   return (
     <div className="filters-container">
       <h3 className="filters-title">Filters</h3>
 
       <div className="filter-group">
-        <label className="filter-label">Search Location</label>
+        <label className="filter-label">Dataset CSV Path</label>
         <input
           className="filter-input"
           type="text"
-          placeholder="Search district or neighborhood..."
-          onChange={e => {
-            // Simple search: set District if matches, else Neighborhood
-            const value = e.target.value;
-            if (districts.includes(value)) {
-              setFilters({ ...filters, District: value, Neighborhood: "" });
-            } else if (neighborhoods.includes(value)) {
-              setFilters({ ...filters, Neighborhood: value, District: "" });
-            }
-          }}
+          name="dataset"
+          placeholder='e.g., @/api/datasets/crime.csv'
+          value={filters.dataset || ""}
+          onChange={handleChange}
         />
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">Crime Code</label>
+        <select
+          className="filter-input"
+          name="crime_code"
+          value={filters.crime_code || ""}
+          onChange={handleChange}
+        >
+          <option value="">All</option>
+          {crimeCodes.map((code) => (
+            <option key={code} value={code}>
+              {code}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="filter-group">
         <label className="filter-label">Crime Type</label>
         <select
           className="filter-input"
-          name="CrimeCode"
-          value={filters.CrimeCode}
+          name="crime_type"
+          value={filters.crime_type || ""}
           onChange={handleChange}
         >
           <option value="">All</option>
-          {crimeCodes.map(code => <option key={code} value={code}>{code}</option>)}
+          {crimeTypes.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
         </select>
       </div>
 
       <div className="filter-group">
-        <label className="filter-label">District</label>
+        <label className="filter-label">Crime Mode</label>
         <select
           className="filter-input"
-          name="District"
-          value={filters.District}
+          name="crime_mode"
+          value={filters.crime_mode || ""}
           onChange={handleChange}
         >
           <option value="">All</option>
-          {districts.map(d => <option key={d} value={d}>{d}</option>)}
+          {crimeModes.map((m) => (
+            <option key={m} value={m}>
+              {m}
+            </option>
+          ))}
         </select>
       </div>
 
       <div className="filter-group">
-        <label className="filter-label">Neighborhood</label>
+        <label className="filter-label">Domain</label>
         <select
           className="filter-input"
-          name="Neighborhood"
-          value={filters.Neighborhood}
+          name="crime_domain"
+          value={filters.crime_domain || ""}
           onChange={handleChange}
         >
           <option value="">All</option>
-          {neighborhoods.map(n => <option key={n} value={n}>{n}</option>)}
+          {domains.map((d) => (
+            <option key={d} value={d}>
+              {d}
+            </option>
+          ))}
         </select>
       </div>
 
       <div className="filter-group">
-        <label className="filter-label">Start Date</label>
+        <label className="filter-label">Place</label>
+        <select
+          className="filter-input"
+          name="place"
+          value={filters.place || ""}
+          onChange={handleChange}
+        >
+          <option value="">All</option>
+          {places.map((p) => (
+            <option key={p} value={p}>
+              {p}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">Search Description</label>
         <input
           className="filter-input"
-          type="date"
-          name="StartDate"
-          value={filters.StartDate}
+          type="text"
+          name="description"
+          placeholder="e.g., fraud, assault..."
+          value={filters.description || ""}
           onChange={handleChange}
         />
       </div>
 
       <div className="filter-group">
-        <label className="filter-label">End Date</label>
+        <label className="filter-label">Start</label>
         <input
           className="filter-input"
-          type="date"
-          name="EndDate"
-          value={filters.EndDate}
+          type="datetime-local"
+          name="start"
+          value={filters.start || ""}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">End</label>
+        <input
+          className="filter-input"
+          type="datetime-local"
+          name="end"
+          value={filters.end || ""}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">Latitude Min</label>
+        <input
+          className="filter-input"
+          type="number"
+          step="any"
+          name="lat_min"
+          value={filters.lat_min || ""}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">Latitude Max</label>
+        <input
+          className="filter-input"
+          type="number"
+          step="any"
+          name="lat_max"
+          value={filters.lat_max || ""}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">Longitude Min</label>
+        <input
+          className="filter-input"
+          type="number"
+          step="any"
+          name="lon_min"
+          value={filters.lon_min || ""}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">Longitude Max</label>
+        <input
+          className="filter-input"
+          type="number"
+          step="any"
+          name="lon_max"
+          value={filters.lon_max || ""}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="filter-group">
+        <label className="filter-label">Limit</label>
+        <input
+          className="filter-input"
+          type="number"
+          name="limit"
+          min={1}
+          max={5000}
+          value={filters.limit || ""}
           onChange={handleChange}
         />
       </div>

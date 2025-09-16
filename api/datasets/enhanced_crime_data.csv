@@ -1,0 +1,353 @@
+crime_code,latitude,longitude,crime_type,crime_mode,crime_description,time,place,crime_domain
+576,28.6139,77.2090,IDENTITY THEFT,Online,Identity theft through phishing,2024-01-15 14:30,New Delhi,Violent Crime
+128,19.0760,72.8777,HOMICIDE,Physical,Murder case in residential area,2024-01-16 22:15,Mumbai,Other Crime
+271,13.0827,80.2707,KIDNAPPING,Physical,Child kidnapping case,2024-01-17 09:45,Chennai,Other Crime
+170,22.5726,88.3639,BURGLARY,Breaking,House burglary at night,2024-01-18 03:20,Kolkata,Other Crime
+421,23.2599,77.4126,VANDALISM,Physical,Property damage case,2024-01-19 16:10,Bhopal,Other Crime
+442,17.3850,78.4867,ASSAULT,Physical,Physical assault incident,2024-01-20 11:30,Hyderabad,Violent Crime
+172,12.9716,77.5946,VEHICLE - STOLEN,Theft,Car theft from parking,2024-01-21 08:45,Bangalore,Violent Crime
+169,26.9124,75.7873,COUNTERFEITING,Financial,Fake currency circulation,2024-01-22 13:20,Jaipur,Other Crime
+338,21.1458,79.0882,EXTORTION,Threat,Money extortion case,2024-01-23 19:30,Nagpur,Other Crime
+497,15.2993,74.1240,PUBLIC INTOXICATION,Substance,Public drunkenness,2024-01-24 21:45,Goa,Other Crime
+260,30.7333,76.7794,FRAUD,Financial,Credit card fraud,2024-01-25 10:15,Chandigarh,Other Crime
+563,25.5941,85.1376,IDENTITY THEFT,Online,Social media identity theft,2024-01-26 15:40,Patna,Violent Crime
+498,31.1048,77.1734,FRAUD,Financial,Insurance fraud case,2024-01-27 12:30,Shimla,Other Crime
+436,34.0837,74.7973,ASSAULT,Physical,Domestic violence case,2024-01-28 20:15,Srinagar,Violent Crime
+266,27.0238,88.2636,SEXUAL ASSAULT,Physical,Sexual harassment case,2024-01-29 18:20,Gangtok,Violent Crime
+357,24.5854,73.7125,COUNTERFEITING,Financial,Document forgery,2024-01-30 14:45,Udaipur,Other Crime
+509,32.7266,74.8570,DRUG OFFENSE,Substance,Drug possession case,2024-01-31 16:30,Jammu,Other Crime
+342,11.9416,79.8083,ARSON,Physical,Property arson case,2024-02-01 02:15,Pondicherry,Fire Accident
+480,8.5241,76.9366,CYBERCRIME,Online,Online banking fraud,2024-02-02 11:45,Thiruvananthapuram,Other Crime
+369,9.9312,76.2673,EXTORTION,Threat,Business extortion,2024-02-03 17:20,Kochi,Other Crime
+251,18.5204,73.8567,TRAFFIC VIOLATION,Vehicle,Rash driving case,2024-02-04 07:30,Pune,Traffic Fatality
+374,20.2961,85.8245,VANDALISM,Physical,Public property damage,2024-02-05 13:15,Bhubaneswar,Other Crime
+507,25.4358,81.8463,SHOPLIFTING,Theft,Store theft incident,2024-02-06 16:45,Allahabad,Other Crime
+322,26.8467,80.9462,VANDALISM,Physical,Graffiti vandalism,2024-02-07 12:20,Lucknow,Other Crime
+527,23.0225,72.5714,DRUG OFFENSE,Substance,Drug trafficking,2024-02-08 19:40,Ahmedabad,Other Crime
+282,28.4595,77.0266,ASSAULT,Physical,Road rage incident,2024-02-09 08:15,Gurgaon,Violent Crime
+247,28.7041,77.1025,IDENTITY THEFT,Online,ATM card cloning,2024-02-10 14:50,Delhi,Violent Crime
+489,29.9457,78.1642,PUBLIC INTOXICATION,Substance,Public disorder,2024-02-11 22:30,Dehradun,Other Crime
+387,30.3165,78.0322,VANDALISM,Physical,Vehicle vandalism,2024-02-12 05:45,Rishikesh,Other Crime
+517,24.7136,84.9900,BURGLARY,Breaking,Office burglary,2024-02-13 01:20,Gaya,Other Crime
+570,25.5941,85.1376,HOMICIDE,Physical,Gang violence murder,2024-02-14 23:15,Patna,Other Crime
+222,22.7196,75.8577,VANDALISM,Physical,School property damage,2024-02-15 15:30,Indore,Other Crime
+319,19.9975,73.7898,ILLEGAL POSSESSION,Weapon,Illegal weapon possession,2024-02-16 18:45,Nashik,Other Crime
+575,21.2787,81.8661,VEHICLE - STOLEN,Theft,Motorcycle theft,2024-02-17 06:30,Raipur,Violent Crime
+341,16.5062,80.6480,VANDALISM,Physical,Bus stop vandalism,2024-02-18 11:15,Vijayawada,Other Crime
+396,15.3173,75.7139,COUNTERFEITING,Financial,Fake documents,2024-02-19 13:40,Belgaum,Other Crime
+187,14.5204,75.7224,SEXUAL ASSAULT,Physical,Workplace harassment,2024-02-20 17:25,Hubli,Violent Crime
+280,11.0168,76.9558,SHOPLIFTING,Theft,Mall shoplifting,2024-02-21 14:20,Coimbatore,Other Crime
+487,10.8505,76.2711,VEHICLE - STOLEN,Theft,Auto rickshaw theft,2024-02-22 09:35,Thrissur,Violent Crime
+154,9.9252,78.1198,FRAUD,Financial,Online shopping fraud,2024-02-23 16:10,Madurai,Other Crime
+148,8.0883,77.0514,HOMICIDE,Physical,Domestic murder case,2024-02-24 21:50,Kanyakumari,Other Crime
+583,12.2958,76.6394,ILLEGAL POSSESSION,Weapon,Illegal firearm possession,2024-02-25 07:45,Mysore,Other Crime
+172,13.3409,74.7421,FIREARM OFFENSE,Weapon,Illegal gun firing,2024-02-26 19:20,Mangalore,Fire Accident
+300,15.8281,74.4978,SEXUAL ASSAULT,Physical,Public sexual assault,2024-02-27 12:15,Goa,Violent Crime
+387,14.6869,74.8370,ARSON,Physical,Vehicle arson,2024-02-28 03:40,Panaji,Fire Accident
+297,18.1124,83.3957,DRUG OFFENSE,Substance,Drug peddling,2024-02-29 20:25,Berhampur,Other Crime
+555,20.9517,84.9709,ROBBERY,Physical,Bank robbery attempt,2024-03-01 10:30,Cuttack,Violent Crime
+128,25.3176,82.9739,FIREARM OFFENSE,Weapon,Gun violence incident,2024-03-02 15:45,Varanasi,Fire Accident
+139,25.4484,78.5685,ILLEGAL POSSESSION,Drug,Drug possession,2024-03-03 18:20,Jhansi,Other Crime
+561,26.2389,73.0243,DRUG OFFENSE,Substance,Heroin trafficking,2024-03-04 22:10,Jodhpur,Other Crime
+573,27.1767,78.0081,BURGLARY,Breaking,Jewelry store burglary,2024-03-05 02:30,Agra,Other Crime
+260,28.0229,73.3119,BURGLARY,Breaking,Residential break-in,2024-03-06 04:15,Bikaner,Other Crime
+211,29.0588,76.0856,PUBLIC INTOXICATION,Substance,Drunk and disorderly,2024-03-07 23:45,Karnal,Other Crime
+312,30.9010,75.8573,BURGLARY,Breaking,Shop burglary,2024-03-08 01:50,Ludhiana,Other Crime
+548,31.6340,74.8723,FIREARM OFFENSE,Weapon,Celebratory firing,2024-03-09 20:30,Amritsar,Fire Accident
+596,32.7266,74.8570,BURGLARY,Breaking,House theft,2024-03-10 03:25,Jammu,Other Crime
+188,33.7782,76.5762,SEXUAL ASSAULT,Physical,Tourist harassment,2024-03-11 14:40,Leh,Violent Crime
+110,24.8607,67.0011,ASSAULT,Physical,Street fight,2024-03-12 19:15,Karachi,Violent Crime
+449,25.3960,68.3578,TRAFFIC VIOLATION,Vehicle,Hit and run case,2024-03-13 08:20,Hyderabad,Traffic Fatality
+352,26.8206,67.0278,SHOPLIFTING,Theft,Market theft,2024-03-14 11:35,Sukkur,Other Crime
+196,27.7103,68.8575,SHOPLIFTING,Theft,Clothing store theft,2024-03-15 15:50,Larkana,Other Crime
+359,24.8615,67.0099,DRUG OFFENSE,Substance,Opium smuggling,2024-03-16 21:25,Karachi,Other Crime
+495,25.3792,68.3683,FRAUD,Financial,Mobile banking fraud,2024-03-17 13:10,Hyderabad,Other Crime
+259,26.2540,68.4579,ILLEGAL POSSESSION,Weapon,Unlicensed weapon,2024-03-18 17:45,Nawabshah,Other Crime
+289,27.5530,68.2177,DRUG OFFENSE,Substance,Hashish possession,2024-03-19 09:30,Shikarpur,Other Crime
+409,24.9056,67.0822,EXTORTION,Threat,Shop extortion,2024-03-20 16:20,Karachi,Other Crime
+306,25.3784,68.3672,CYBERCRIME,Online,Social media fraud,2024-03-21 12:45,Hyderabad,Other Crime
+420,26.8753,68.0211,BURGLARY,Breaking,Warehouse burglary,2024-03-22 02:10,Sukkur,Other Crime
+469,27.8974,68.5247,PUBLIC INTOXICATION,Substance,Public drinking,2024-03-23 20:35,Jacobabad,Other Crime
+292,24.8607,67.0011,FIREARM OFFENSE,Weapon,Illegal gun trade,2024-03-24 18:15,Karachi,Fire Accident
+512,25.3960,68.3578,FIREARM OFFENSE,Weapon,Gun violence,2024-03-25 14:25,Hyderabad,Fire Accident
+244,26.2540,68.4579,ARSON,Physical,Shop arson,2024-03-26 01:40,Nawabshah,Fire Accident
+269,27.5530,68.2177,BURGLARY,Breaking,Home invasion,2024-03-27 03:55,Shikarpur,Other Crime
+524,24.9056,67.0822,ARSON,Physical,Vehicle burning,2024-03-28 22:20,Karachi,Fire Accident
+404,25.3784,68.3672,CYBERCRIME,Online,Email phishing,2024-03-29 10:15,Hyderabad,Other Crime
+191,26.8753,68.0211,VANDALISM,Physical,Public toilet vandalism,2024-03-30 16:50,Sukkur,Other Crime
+369,27.8974,68.5247,KIDNAPPING,Physical,Child abduction,2024-03-31 07:25,Jacobabad,Other Crime
+517,28.3949,84.1240,IDENTITY THEFT,Online,Bank account hacking,2024-04-01 13:35,Kathmandu,Violent Crime
+229,27.7172,85.3240,ROBBERY,Physical,Tourist robbery,2024-04-02 19:10,Pokhara,Violent Crime
+154,26.4499,87.2718,VEHICLE - STOLEN,Theft,Bus theft,2024-04-03 05:30,Biratnagar,Violent Crime
+197,27.5916,83.9956,ASSAULT,Physical,Bar fight,2024-04-04 23:45,Bharatpur,Violent Crime
+421,28.2096,83.9856,FRAUD,Financial,Land fraud case,2024-04-05 11:20,Butwal,Other Crime
+305,27.6710,85.4298,ROBBERY,Physical,Bank robbery,2024-04-06 14:15,Lalitpur,Violent Crime
+150,28.3949,84.1240,TRAFFIC VIOLATION,Vehicle,Drunk driving,2024-04-07 20:30,Kathmandu,Traffic Fatality
+542,27.7172,85.3240,PUBLIC INTOXICATION,Substance,Festival drinking,2024-04-08 17:25,Pokhara,Other Crime
+438,26.4499,87.2718,VANDALISM,Physical,Temple vandalism,2024-04-09 06:40,Biratnagar,Other Crime
+498,27.5916,83.9956,PUBLIC INTOXICATION,Substance,Street drinking,2024-04-10 21:15,Bharatpur,Other Crime
+345,28.2096,83.9856,ROBBERY,Physical,Jewelry store robbery,2024-04-11 12:50,Butwal,Violent Crime
+108,27.6710,85.4298,HOMICIDE,Physical,Gang murder,2024-04-12 01:35,Lalitpur,Other Crime
+219,28.3949,84.1240,VEHICLE - STOLEN,Theft,Motorcycle theft,2024-04-13 08:20,Kathmandu,Violent Crime
+219,27.7172,85.3240,BURGLARY,Breaking,Hotel burglary,2024-04-14 04:10,Pokhara,Other Crime
+510,26.4499,87.2718,CYBERCRIME,Online,Online gambling fraud,2024-04-15 15:30,Biratnagar,Other Crime
+597,27.5916,83.9956,FRAUD,Financial,Ponzi scheme fraud,2024-04-16 09:45,Bharatpur,Other Crime
+272,28.2096,83.9856,SEXUAL ASSAULT,Physical,Workplace harassment,2024-04-17 16:20,Butwal,Violent Crime
+413,27.6710,85.4298,PUBLIC INTOXICATION,Substance,Wedding celebration drinking,2024-04-18 22:40,Lalitpur,Other Crime
+355,23.8103,90.4125,DRUG OFFENSE,Substance,Yaba trafficking,2024-04-19 18:15,Dhaka,Other Crime
+523,22.3569,91.7832,IDENTITY THEFT,Online,Mobile banking fraud,2024-04-20 13:25,Chittagong,Violent Crime
+486,24.3636,88.6241,SEXUAL ASSAULT,Physical,Public transport harassment,2024-04-21 07:50,Rajshahi,Violent Crime
+292,23.4607,91.1809,IDENTITY THEFT,Online,Facebook account hacking,2024-04-22 11:30,Comilla,Violent Crime
+455,22.8456,89.5403,DRUG OFFENSE,Substance,Phensedyl smuggling,2024-04-23 20:15,Khulna,Other Crime
+515,24.9045,91.8611,PUBLIC INTOXICATION,Substance,Religious festival drinking,2024-04-24 16:40,Sylhet,Other Crime
+566,25.7439,89.2752,EXTORTION,Threat,Transport extortion,2024-04-25 14:20,Rangpur,Other Crime
+419,23.8103,90.4125,ASSAULT,Physical,Political violence,2024-04-26 10:35,Dhaka,Violent Crime
+250,22.3569,91.7832,VEHICLE - STOLEN,Theft,Rickshaw theft,2024-04-27 06:15,Chittagong,Violent Crime
+597,24.3636,88.6241,FRAUD,Financial,Microfinance fraud,2024-04-28 12:45,Rajshahi,Other Crime
+583,23.4607,91.1809,VEHICLE - STOLEN,Theft,Car theft,2024-04-29 19:20,Comilla,Violent Crime
+342,22.8456,89.5403,DOMESTIC VIOLENCE,Physical,Spousal abuse,2024-04-30 21:10,Khulna,Violent Crime
+417,24.9045,91.8611,ARSON,Physical,Market fire,2024-05-01 03:25,Sylhet,Fire Accident
+169,25.7439,89.2752,PUBLIC INTOXICATION,Substance,Street drinking,2024-05-02 17:50,Rangpur,Other Crime
+464,6.9271,79.8612,ARSON,Physical,Building arson,2024-05-03 02:40,Colombo,Fire Accident
+500,7.8731,80.7718,ILLEGAL POSSESSION,Weapon,Illegal explosives,2024-05-04 15:15,Kandy,Other Crime
+183,8.3114,80.4037,COUNTERFEITING,Financial,Currency counterfeiting,2024-05-05 11:30,Kurunegala,Other Crime
+270,9.6615,80.0255,HOMICIDE,Physical,Ethnic violence murder,2024-05-06 20:45,Jaffna,Other Crime
+259,6.0535,80.2210,EXTORTION,Threat,Fishing boat extortion,2024-05-07 08:10,Galle,Other Crime
+184,7.2906,80.6337,FIREARM OFFENSE,Weapon,Hunting rifle misuse,2024-05-08 14:35,Matara,Fire Accident
+353,6.9271,79.8612,BURGLARY,Breaking,Embassy area burglary,2024-05-09 01:20,Colombo,Other Crime
+235,7.8731,80.7718,VANDALISM,Physical,Temple vandalism,2024-05-10 16:55,Kandy,Other Crime
+287,8.3114,80.4037,DRUG OFFENSE,Substance,Heroin smuggling,2024-05-11 12:40,Kurunegala,Other Crime
+257,9.6615,80.0255,ILLEGAL POSSESSION,Drug,Cannabis possession,2024-05-12 18:25,Jaffna,Other Crime
+537,6.0535,80.2210,TRAFFIC VIOLATION,Vehicle,Bus accident,2024-05-13 09:15,Galle,Traffic Fatality
+277,7.2906,80.6337,VEHICLE - STOLEN,Theft,Three-wheeler theft,2024-05-14 13:50,Matara,Violent Crime
+321,6.9271,79.8612,KIDNAPPING,Physical,Business kidnapping,2024-05-15 22:30,Colombo,Other Crime
+432,7.8731,80.7718,VANDALISM,Physical,School vandalism,2024-05-16 07:45,Kandy,Other Crime
+129,8.3114,80.4037,SEXUAL ASSAULT,Physical,Tourist assault,2024-05-17 19:20,Kurunegala,Violent Crime
+347,9.6615,80.0255,FRAUD,Financial,Gem fraud,2024-05-18 14:10,Jaffna,Other Crime
+127,6.0535,80.2210,ASSAULT,Physical,Beach assault,2024-05-19 11:35,Galle,Violent Crime
+117,7.2906,80.6337,FIREARM OFFENSE,Weapon,Illegal gun possession,2024-05-20 16:25,Matara,Fire Accident
+339,23.6850,90.3563,IDENTITY THEFT,Online,Credit card fraud,2024-05-21 13:15,Dhaka,Violent Crime
+374,22.3569,91.7832,SHOPLIFTING,Theft,Electronics theft,2024-05-22 09:40,Chittagong,Other Crime
+111,24.3636,88.6241,ROBBERY,Physical,Street robbery,2024-05-23 21:20,Rajshahi,Violent Crime
+331,23.4607,91.1809,ARSON,Physical,Factory arson,2024-05-24 05:35,Comilla,Fire Accident
+295,22.8456,89.5403,IDENTITY THEFT,Online,Online banking theft,2024-05-25 12:50,Khulna,Violent Crime
+309,24.9045,91.8611,HOMICIDE,Physical,Honor killing,2024-05-26 18:15,Sylhet,Other Crime
+465,25.7439,89.2752,ILLEGAL POSSESSION,Weapon,Bomb making materials,2024-05-27 14:30,Rangpur,Other Crime
+406,23.8103,90.4125,VANDALISM,Physical,Government building vandalism,2024-05-28 10:45,Dhaka,Other Crime
+278,22.3569,91.7832,FRAUD,Financial,Export-import fraud,2024-05-29 17:25,Chittagong,Other Crime
+569,24.3636,88.6241,PUBLIC INTOXICATION,Substance,Festival disorder,2024-05-30 20:10,Rajshahi,Other Crime
+445,23.4607,91.1809,ASSAULT,Physical,Election violence,2024-05-31 15:55,Comilla,Violent Crime
+465,22.8456,89.5403,KIDNAPPING,Physical,Ransom kidnapping,2024-06-01 08:30,Khulna,Other Crime
+404,24.9045,91.8611,CYBERCRIME,Online,Cryptocurrency fraud,2024-06-02 11:20,Sylhet,Other Crime
+270,25.7439,89.2752,DOMESTIC VIOLENCE,Physical,Dowry violence,2024-06-03 19:45,Rangpur,Violent Crime
+113,28.6139,77.2090,FIREARM OFFENSE,Weapon,Illegal arms dealing,2024-06-04 02:15,New Delhi,Fire Accident
+278,19.0760,72.8777,ILLEGAL POSSESSION,Drug,Cocaine possession,2024-06-05 14:40,Mumbai,Other Crime
+487,13.0827,80.2707,ASSAULT,Physical,Communal violence,2024-06-06 16:30,Chennai,Violent Crime
+172,22.5726,88.3639,IDENTITY THEFT,Online,Aadhaar card fraud,2024-06-07 09:15,Kolkata,Violent Crime
+165,23.2599,77.4126,PUBLIC INTOXICATION,Substance,Cricket match drinking,2024-06-08 21:50,Bhopal,Other Crime
+514,17.3850,78.4867,CYBERCRIME,Online,UPI fraud,2024-06-09 13:25,Hyderabad,Other Crime
+262,12.9716,77.5946,COUNTERFEITING,Financial,Software piracy,2024-06-10 10:35,Bangalore,Other Crime
+558,26.9124,75.7873,IDENTITY THEFT,Online,PAN card misuse,2024-06-11 17:15,Jaipur,Violent Crime
+157,21.1458,79.0882,SHOPLIFTING,Theft,Supermarket theft,2024-06-12 12:20,Nagpur,Other Crime
+241,15.2993,74.1240,DRUG OFFENSE,Substance,Charas smuggling,2024-06-13 18:45,Goa,Other Crime
+311,30.7333,76.7794,ILLEGAL POSSESSION,Weapon,Sword possession,2024-06-14 07:30,Chandigarh,Other Crime
+248,25.5941,85.1376,IDENTITY THEFT,Online,Voter ID fraud,2024-06-15 15:10,Patna,Violent Crime
+523,31.1048,77.1734,KIDNAPPING,Physical,Tourist kidnapping,2024-06-16 11:45,Shimla,Other Crime
+238,34.0837,74.7973,DOMESTIC VIOLENCE,Physical,Honor killing attempt,2024-06-17 20:25,Srinagar,Violent Crime
+109,27.0238,88.2636,DOMESTIC VIOLENCE,Physical,Domestic abuse,2024-06-18 16:40,Gangtok,Violent Crime
+448,24.5854,73.7125,COUNTERFEITING,Financial,Fake degree certificates,2024-06-19 14:15,Udaipur,Other Crime
+588,32.7266,74.8570,HOMICIDE,Physical,Terrorist attack,2024-06-20 22:30,Jammu,Other Crime
+236,8.5241,76.9366,VEHICLE - STOLEN,Theft,Taxi theft,2024-06-21 06:20,Thiruvananthapuram,Violent Crime
+509,9.9312,76.2673,ASSAULT,Physical,Road rage,2024-06-22 12:35,Kochi,Violent Crime
+321,18.5204,73.8567,COUNTERFEITING,Financial,Fake currency notes,2024-06-23 17:50,Pune,Other Crime
+420,20.2961,85.8245,CYBERCRIME,Online,Dating app fraud,2024-06-24 13:40,Bhubaneswar,Other Crime
+589,25.4358,81.8463,SHOPLIFTING,Theft,Book store theft,2024-06-25 10:25,Allahabad,Other Crime
+492,26.8467,80.9462,ARSON,Physical,Crop burning,2024-06-26 04:15,Lucknow,Fire Accident
+312,23.0225,72.5714,SEXUAL ASSAULT,Physical,College campus assault,2024-06-27 18:30,Ahmedabad,Violent Crime
+234,28.4595,77.0266,VANDALISM,Physical,Metro station vandalism,2024-06-28 08:45,Gurgaon,Other Crime
+470,28.7041,77.1025,VANDALISM,Physical,Park vandalism,2024-06-29 15:20,Delhi,Other Crime
+518,29.9457,78.1642,FRAUD,Financial,Education loan fraud,2024-06-30 11:10,Dehradun,Other Crime
+295,30.3165,78.0322,DRUG OFFENSE,Substance,Marijuana cultivation,2024-07-01 19:35,Rishikesh,Other Crime
+342,24.7136,84.9900,TRAFFIC VIOLATION,Vehicle,Truck overloading,2024-07-02 07:25,Gaya,Traffic Fatality
+352,25.5941,85.1376,COUNTERFEITING,Financial,Fake medical certificates,2024-07-03 14:50,Patna,Other Crime
+305,22.7196,75.8577,TRAFFIC VIOLATION,Vehicle,Speed limit violation,2024-07-04 16:15,Indore,Traffic Fatality
+245,19.9975,73.7898,SEXUAL ASSAULT,Physical,Public transport harassment,2024-07-05 09:30,Nashik,Violent Crime
+438,21.2787,81.8661,DRUG OFFENSE,Substance,Ganja possession,2024-07-06 21:45,Raipur,Other Crime
+144,16.5062,80.6480,ROBBERY,Physical,ATM robbery,2024-07-07 03:20,Vijayawada,Violent Crime
+292,15.3173,75.7139,BURGLARY,Breaking,Government office burglary,2024-07-08 01:40,Belgaum,Other Crime
+134,14.5204,75.7224,FIREARM OFFENSE,Weapon,Pistol firing,2024-07-09 23:15,Hubli,Fire Accident
+331,11.0168,76.9558,ILLEGAL POSSESSION,Drug,Synthetic drug possession,2024-07-10 12:25,Coimbatore,Other Crime
+191,10.8505,76.2711,FRAUD,Financial,Gold loan fraud,2024-07-11 17:40,Thrissur,Other Crime
+584,9.9252,78.1198,DOMESTIC VIOLENCE,Physical,Elder abuse,2024-07-12 20:30,Madurai,Violent Crime
+341,8.0883,77.0514,TRAFFIC VIOLATION,Vehicle,Two-wheeler racing,2024-07-13 15:10,Kanyakumari,Traffic Fatality
+541,12.2958,76.6394,CYBERCRIME,Online,E-commerce fraud,2024-07-14 11:55,Mysore,Other Crime
+133,13.3409,74.7421,SEXUAL ASSAULT,Physical,Beach assault,2024-07-15 18:20,Mangalore,Violent Crime
+422,15.8281,74.4978,SEXUAL ASSAULT,Physical,Hotel room assault,2024-07-16 22:45,Goa,Violent Crime
+151,14.6869,74.8370,FRAUD,Financial,Casino fraud,2024-07-17 13:30,Panaji,Other Crime
+287,18.1124,83.3957,FRAUD,Financial,Fishing license fraud,2024-07-18 08:15,Berhampur,Other Crime
+541,20.9517,84.9709,VANDALISM,Physical,Stadium vandalism,2024-07-19 16:25,Cuttack,Other Crime
+236,25.3176,82.9739,IDENTITY THEFT,Online,Railway booking fraud,2024-07-20 12:40,Varanasi,Violent Crime
+415,25.4484,78.5685,EXTORTION,Threat,Construction extortion,2024-07-21 19:15,Jhansi,Other Crime
+151,26.2389,73.0243,CYBERCRIME,Online,WhatsApp fraud,2024-07-22 14:50,Jodhpur,Other Crime
+268,27.1767,78.0081,KIDNAPPING,Physical,Bride kidnapping,2024-07-23 10:20,Agra,Other Crime
+381,28.0229,73.3119,IDENTITY THEFT,Online,Driving license fraud,2024-07-24 16:35,Bikaner,Violent Crime
+249,29.0588,76.0856,PUBLIC INTOXICATION,Substance,Marriage celebration drinking,2024-07-25 21:25,Karnal,Other Crime
+389,30.9010,75.8573,DOMESTIC VIOLENCE,Physical,In-law harassment,2024-07-26 18:40,Ludhiana,Violent Crime
+235,31.6340,74.8723,ILLEGAL POSSESSION,Weapon,Kirpan misuse,2024-07-27 13:15,Amritsar,Other Crime
+562,32.7266,74.8570,DOMESTIC VIOLENCE,Physical,Child abuse,2024-07-28 09:50,Jammu,Violent Crime
+287,33.7782,76.5762,PUBLIC INTOXICATION,Substance,Tourist drinking,2024-07-29 17:30,Leh,Other Crime
+316,24.8607,67.0011,EXTORTION,Threat,Market vendor extortion,2024-07-30 11:45,Karachi,Other Crime
+367,25.3960,68.3578,ARSON,Physical,Political office arson,2024-07-31 02:20,Hyderabad,Fire Accident
+471,26.8206,67.0278,HOMICIDE,Physical,Sectarian violence,2024-08-01 20:15,Sukkur,Other Crime
+365,27.7103,68.8575,COUNTERFEITING,Financial,Fake passport,2024-08-02 15:30,Larkana,Other Crime
+484,24.8615,67.0099,FRAUD,Financial,Hawala fraud,2024-08-03 12:10,Karachi,Other Crime
+257,25.3792,68.3683,DRUG OFFENSE,Substance,Opium cultivation,2024-08-04 08:25,Hyderabad,Other Crime
+427,26.2540,68.4579,KIDNAPPING,Physical,Political kidnapping,2024-08-05 19:40,Nawabshah,Other Crime
+340,27.5530,68.2177,SHOPLIFTING,Theft,Bazaar theft,2024-08-06 14:55,Shikarpur,Other Crime
+246,24.9056,67.0822,VEHICLE - STOLEN,Theft,Truck theft,2024-08-07 06:30,Karachi,Violent Crime
+376,25.3784,68.3672,COUNTERFEITING,Financial,Fake educational certificates,2024-08-08 11:15,Hyderabad,Other Crime
+542,26.8753,68.0211,ASSAULT,Physical,Tribal conflict,2024-08-09 17:50,Sukkur,Violent Crime
+257,27.8974,68.5247,EXTORTION,Threat,Water tanker extortion,2024-08-10 13:35,Jacobabad,Other Crime
+573,28.3949,84.1240,PUBLIC INTOXICATION,Substance,Religious festival drinking,2024-08-11 20:20,Kathmandu,Other Crime
+148,27.7172,85.3240,COUNTERFEITING,Financial,Trekking permit forgery,2024-08-12 09:45,Pokhara,Other Crime
+439,26.4499,87.2718,FIREARM OFFENSE,Weapon,Border shooting,2024-08-13 16:10,Biratnagar,Fire Accident
+598,27.5916,83.9956,IDENTITY THEFT,Online,Remittance fraud,2024-08-14 12:25,Bharatpur,Violent Crime
+239,28.2096,83.9856,VEHICLE - STOLEN,Theft,Tempo theft,2024-08-15 18:40,Butwal,Violent Crime
+267,27.6710,85.4298,SEXUAL ASSAULT,Physical,Monastery area assault,2024-08-16 14:15,Lalitpur,Violent Crime
+163,23.8103,90.4125,SHOPLIFTING,Theft,Market shoplifting,2024-08-17 10:30,Dhaka,Other Crime
+572,22.3569,91.7832,COUNTERFEITING,Financial,Visa forgery,2024-08-18 15:45,Chittagong,Other Crime
+561,24.3636,88.6241,FRAUD,Financial,NGO fund fraud,2024-08-19 11:20,Rajshahi,Other Crime
+336,23.4607,91.1809,TRAFFIC VIOLATION,Vehicle,Bus overloading,2024-08-20 07:35,Comilla,Traffic Fatality
+563,22.8456,89.5403,BURGLARY,Breaking,Fish processing plant burglary,2024-08-21 03:50,Khulna,Other Crime
+218,24.9045,91.8611,VEHICLE - STOLEN,Theft,CNG auto theft,2024-08-22 13:15,Sylhet,Violent Crime
+276,25.7439,89.2752,KIDNAPPING,Physical,Cross-border kidnapping,2024-08-23 19:30,Rangpur,Other Crime
+570,6.9271,79.8612,FRAUD,Financial,Tea estate fraud,2024-08-24 16:45,Colombo,Other Crime
+307,7.8731,80.7718,ROBBERY,Physical,Gem store robbery,2024-08-25 12:10,Kandy,Violent Crime
+153,8.3114,80.4037,CYBERCRIME,Online,Mobile app fraud,2024-08-26 08:55,Kurunegala,Other Crime
+340,9.6615,80.0255,HOMICIDE,Physical,Fishing dispute murder,2024-08-27 21:20,Jaffna,Other Crime
+365,6.0535,80.2210,VANDALISM,Physical,Lighthouse vandalism,2024-08-28 05:40,Galle,Other Crime
+269,7.2906,80.6337,COUNTERFEITING,Financial,Antique forgery,2024-08-29 14:25,Matara,Other Crime
+247,6.9271,79.8612,VEHICLE - STOLEN,Theft,Diplomatic car theft,2024-08-30 17:15,Colombo,Violent Crime
+190,7.8731,80.7718,VANDALISM,Physical,Buddhist statue vandalism,2024-08-31 11:30,Kandy,Other Crime
+429,8.3114,80.4037,IDENTITY THEFT,Online,Coconut export fraud,2024-09-01 09:20,Kurunegala,Violent Crime
+547,9.6615,80.0255,ARSON,Physical,Palmyra tree arson,2024-09-02 23:45,Jaffna,Fire Accident
+136,6.0535,80.2210,HOMICIDE,Physical,Fisherman murder,2024-09-03 04:10,Galle,Other Crime
+254,7.2906,80.6337,ASSAULT,Physical,Cinnamon plantation assault,2024-09-04 15:35,Matara,Violent Crime
+514,28.6139,77.2090,TRAFFIC VIOLATION,Vehicle,Red light jumping,2024-09-05 18:50,New Delhi,Traffic Fatality
+105,19.0760,72.8777,ARSON,Physical,Slum fire,2024-09-06 02:25,Mumbai,Fire Accident
+561,13.0827,80.2707,CYBERCRIME,Online,Software piracy,2024-09-07 13:40,Chennai,Other Crime
+583,22.5726,88.3639,CYBERCRIME,Online,Fake job portal,2024-09-08 10:15,Kolkata,Other Crime
+418,23.2599,77.4126,FIREARM OFFENSE,Weapon,Wedding firing,2024-09-09 20:30,Bhopal,Fire Accident
+466,17.3850,78.4867,FIREARM OFFENSE,Weapon,Gang warfare,2024-09-10 16:45,Hyderabad,Fire Accident
+402,12.9716,77.5946,COUNTERFEITING,Financial,Software license fraud,2024-09-11 12:20,Bangalore,Other Crime
+188,26.9124,75.7873,VANDALISM,Physical,Heritage site vandalism,2024-09-12 14:35,Jaipur,Other Crime
+512,21.1458,79.0882,FRAUD,Financial,Mining permit fraud,2024-09-13 09:50,Nagpur,Other Crime
+388,15.2993,74.1240,SEXUAL ASSAULT,Physical,Beach harassment,2024-09-14 17:25,Goa,Violent Crime
+423,30.7333,76.7794,ROBBERY,Physical,Government office robbery,2024-09-15 11:40,Chandigarh,Violent Crime
+399,25.5941,85.1376,ILLEGAL POSSESSION,Weapon,Country-made pistol,2024-09-16 19:15,Patna,Other Crime
+432,31.1048,77.1734,EXTORTION,Threat,Hotel extortion,2024-09-17 15:30,Shimla,Other Crime
+262,34.0837,74.7973,IDENTITY THEFT,Online,Army recruitment fraud,2024-09-18 08:45,Srinagar,Violent Crime
+151,27.0238,88.2636,EXTORTION,Threat,Border trade extortion,2024-09-19 13:20,Gangtok,Other Crime
+366,24.5854,73.7125,KIDNAPPING,Physical,Palace area kidnapping,2024-09-20 21:10,Udaipur,Other Crime
+542,32.7266,74.8570,BURGLARY,Breaking,Army camp burglary,2024-09-21 05:35,Jammu,Other Crime
+145,8.5241,76.9366,COUNTERFEITING,Financial,Spice export fraud,2024-09-22 12:15,Thiruvananthapuram,Other Crime
+142,9.9312,76.2673,IDENTITY THEFT,Online,Port worker ID fraud,2024-09-23 16:50,Kochi,Violent Crime
+261,18.5204,73.8567,SEXUAL ASSAULT,Physical,IT park harassment,2024-09-24 14:25,Pune,Violent Crime
+152,20.2961,85.8245,COUNTERFEITING,Financial,Temple donation fraud,2024-09-25 10:40,Bhubaneswar,Other Crime
+430,25.4358,81.8463,IDENTITY THEFT,Online,University admission fraud,2024-09-26 17:15,Allahabad,Violent Crime
+203,26.8467,80.9462,ILLEGAL POSSESSION,Drug,Opium possession,2024-09-27 13:30,Lucknow,Other Crime
+508,23.0225,72.5714,KIDNAPPING,Physical,Business kidnapping,2024-09-28 20:45,Ahmedabad,Other Crime
+590,28.4595,77.0266,ROBBERY,Physical,Mall robbery,2024-09-29 18:20,Gurgaon,Violent Crime
+491,28.7041,77.1025,SHOPLIFTING,Theft,Electronics store theft,2024-09-30 11:35,Delhi,Other Crime
+586,29.9457,78.1642,DRUG OFFENSE,Substance,Charas smuggling,2024-10-01 15:50,Dehradun,Other Crime
+292,30.3165,78.0322,PUBLIC INTOXICATION,Substance,River rafting drinking,2024-10-02 09:25,Rishikesh,Other Crime
+584,24.7136,84.9900,IDENTITY THEFT,Online,Pilgrimage fraud,2024-10-03 14:10,Gaya,Violent Crime
+515,25.5941,85.1376,VEHICLE - STOLEN,Theft,Government vehicle theft,2024-10-04 07:45,Patna,Violent Crime
+350,22.7196,75.8577,TRAFFIC VIOLATION,Vehicle,Commercial vehicle violation,2024-10-05 16:30,Indore,Traffic Fatality
+546,19.9975,73.7898,ASSAULT,Physical,Wine shop assault,2024-10-06 12:55,Nashik,Violent Crime
+115,21.2787,81.8661,ASSAULT,Physical,Mining area assault,2024-10-07 19:40,Raipur,Violent Crime
+254,16.5062,80.6480,TRAFFIC VIOLATION,Vehicle,Ferry accident,2024-10-08 06:20,Vijayawada,Traffic Fatality
+410,15.3173,75.7139,TRAFFIC VIOLATION,Vehicle,Highway speeding,2024-10-09 13:45,Belgaum,Traffic Fatality
+217,14.5204,75.7224,KIDNAPPING,Physical,Student kidnapping,2024-10-10 10:15,Hubli,Other Crime
+189,11.0168,76.9558,FIREARM OFFENSE,Weapon,Factory firing,2024-10-11 17:25,Coimbatore,Fire Accident
+180,10.8505,76.2711,FRAUD,Financial,Ayurveda medicine fraud,2024-10-12 14:40,Thrissur,Other Crime
+215,9.9252,78.1198,BURGLARY,Breaking,Temple burglary,2024-10-13 02:15,Madurai,Other Crime
+481,8.0883,77.0514,ARSON,Physical,Coconut grove arson,2024-10-14 04:30,Kanyakumari,Fire Accident
+577,12.2958,76.6394,ASSAULT,Physical,Silk factory assault,2024-10-15 11:20,Mysore,Violent Crime
+212,13.3409,74.7421,SHOPLIFTING,Theft,Spice market theft,2024-10-16 16:35,Mangalore,Other Crime
+244,15.8281,74.4978,VEHICLE - STOLEN,Theft,Tourist vehicle theft,2024-10-17 08:50,Goa,Violent Crime
+363,14.6869,74.8370,IDENTITY THEFT,Online,Casino membership fraud,2024-10-18 21:15,Panaji,Violent Crime
+550,18.1124,83.3957,ILLEGAL POSSESSION,Weapon,Fishing spear misuse,2024-10-19 13:25,Berhampur,Other Crime
+484,20.9517,84.9709,EXTORTION,Threat,Port extortion,2024-10-20 18:10,Cuttack,Other Crime
+515,25.3176,82.9739,SHOPLIFTING,Theft,Railway station theft,2024-10-21 07:40,Varanasi,Other Crime
+307,25.4484,78.5685,BURGLARY,Breaking,Fort area burglary,2024-10-22 03:55,Jhansi,Other Crime
+289,26.2389,73.0243,BURGLARY,Breaking,Desert resort burglary,2024-10-23 01:20,Jodhpur,Other Crime
+562,27.1767,78.0081,ASSAULT,Physical,Taj Mahal area assault,2024-10-24 15:45,Agra,Violent Crime
+568,28.0229,73.3119,DOMESTIC VIOLENCE,Physical,Camel trader violence,2024-10-25 12:30,Bikaner,Violent Crime
+262,29.0588,76.0856,VANDALISM,Physical,Agricultural equipment vandalism,2024-10-26 17:20,Karnal,Other Crime
+546,30.9010,75.8573,TRAFFIC VIOLATION,Vehicle,Tractor accident,2024-10-27 09:15,Ludhiana,Traffic Fatality
+199,31.6340,74.8723,IDENTITY THEFT,Online,Gurudwara donation fraud,2024-10-28 14:50,Amritsar,Violent Crime
+513,32.7266,74.8570,SEXUAL ASSAULT,Physical,Military area assault,2024-10-29 20:35,Jammu,Violent Crime
+256,33.7782,76.5762,ROBBERY,Physical,Monastery robbery,2024-10-30 11:25,Leh,Violent Crime
+390,24.8607,67.0011,IDENTITY THEFT,Online,Shipping document fraud,2024-10-31 16:40,Karachi,Violent Crime
+206,25.3960,68.3578,ARSON,Physical,Cotton field arson,2024-11-01 22:15,Hyderabad,Fire Accident
+491,26.8206,67.0278,DOMESTIC VIOLENCE,Physical,Feudal violence,2024-11-02 18:30,Sukkur,Violent Crime
+139,27.7103,68.8575,PUBLIC INTOXICATION,Substance,Harvest celebration drinking,2024-11-03 21:45,Larkana,Other Crime
+126,24.8615,67.0099,TRAFFIC VIOLATION,Vehicle,Donkey cart accident,2024-11-04 06:20,Karachi,Traffic Fatality
+431,25.3792,68.3683,FIREARM OFFENSE,Weapon,Tribal weapon firing,2024-11-05 19:10,Hyderabad,Fire Accident
+528,26.2540,68.4579,TRAFFIC VIOLATION,Vehicle,Camel cart collision,2024-11-06 08:35,Nawabshah,Traffic Fatality
+282,27.5530,68.2177,COUNTERFEITING,Financial,Land record forgery,2024-11-07 13:50,Shikarpur,Other Crime
+577,24.9056,67.0822,SEXUAL ASSAULT,Physical,Factory worker harassment,2024-11-08 15:25,Karachi,Violent Crime
+494,25.3784,68.3672,DOMESTIC VIOLENCE,Physical,Arranged marriage violence,2024-11-09 10:40,Hyderabad,Violent Crime
+395,26.8753,68.0211,DRUG OFFENSE,Substance,Poppy cultivation,2024-11-10 17:55,Sukkur,Other Crime
+276,27.8974,68.5247,ARSON,Physical,Wheat field arson,2024-11-11 04:20,Jacobabad,Fire Accident
+560,28.3949,84.1240,DRUG OFFENSE,Substance,Hashish trafficking,2024-11-12 12:15,Kathmandu,Other Crime
+217,27.7172,85.3240,ASSAULT,Physical,Trekking guide assault,2024-11-13 16:30,Pokhara,Violent Crime
+389,26.4499,87.2718,BURGLARY,Breaking,Tea garden burglary,2024-11-14 02:45,Biratnagar,Other Crime
+361,27.5916,83.9956,BURGLARY,Breaking,Monastery burglary,2024-11-15 05:10,Bharatpur,Other Crime
+269,28.2096,83.9856,DOMESTIC VIOLENCE,Physical,Polygamy violence,2024-11-16 18:25,Butwal,Violent Crime
+106,27.6710,85.4298,COUNTERFEITING,Financial,Mountaineering certificate forgery,2024-11-17 14:40,Lalitpur,Other Crime
+330,23.8103,90.4125,VANDALISM,Physical,Liberation War memorial vandalism,2024-11-18 11:15,Dhaka,Other Crime
+190,22.3569,91.7832,ARSON,Physical,Shipyard arson,2024-11-19 20:50,Chittagong,Fire Accident
+446,24.3636,88.6241,FRAUD,Financial,Silk trade fraud,2024-11-20 13:35,Rajshahi,Other Crime
+503,23.4607,91.1809,TRAFFIC VIOLATION,Vehicle,Rickshaw accident,2024-11-21 07:20,Comilla,Traffic Fatality
+471,22.8456,89.5403,ARSON,Physical,Shrimp farm arson,2024-11-22 03:40,Khulna,Fire Accident
+526,24.9045,91.8611,FRAUD,Financial,Tea garden worker fraud,2024-11-23 15:55,Sylhet,Other Crime
+589,25.7439,89.2752,SHOPLIFTING,Theft,Border market theft,2024-11-24 12:10,Rangpur,Other Crime
+344,6.9271,79.8612,VANDALISM,Physical,Cricket ground vandalism,2024-11-25 17:30,Colombo,Other Crime
+470,7.8731,80.7718,ROBBERY,Physical,Spice warehouse robbery,2024-11-26 09:45,Kandy,Violent Crime
+506,8.3114,80.4037,BURGLARY,Breaking,Coconut processing plant burglary,2024-11-27 22:20,Kurunegala,Other Crime
+187,9.6615,80.0255,ARSON,Physical,Fishing boat arson,2024-11-28 01:15,Jaffna,Fire Accident
+570,6.0535,80.2210,DRUG OFFENSE,Substance,Betel leaf drug smuggling,2024-11-29 16:25,Galle,Other Crime
+358,7.2906,80.6337,ARSON,Physical,Cinnamon factory arson,2024-11-30 11:50,Matara,Fire Accident
+586,28.6139,77.2090,ILLEGAL POSSESSION,Weapon,Unlicensed security weapon,2024-12-01 14:35,New Delhi,Other Crime
+534,19.0760,72.8777,COUNTERFEITING,Financial,Movie ticket fraud,2024-12-02 19:20,Mumbai,Other Crime
+225,13.0827,80.2707,VANDALISM,Physical,Marina beach vandalism,2024-12-03 08:10,Chennai,Other Crime
+331,22.5726,88.3639,SHOPLIFTING,Theft,Book fair theft,2024-12-04 13:45,Kolkata,Other Crime
+359,23.2599,77.4126,SHOPLIFTING,Theft,Handicraft theft,2024-12-05 10:30,Bhopal,Other Crime
+574,17.3850,78.4867,COUNTERFEITING,Financial,Software license forgery,2024-12-06 16:15,Hyderabad,Other Crime
+477,12.9716,77.5946,SEXUAL ASSAULT,Physical,Tech park harassment,2024-12-07 12:40,Bangalore,Violent Crime
+419,26.9124,75.7873,DOMESTIC VIOLENCE,Physical,Tourist guide violence,2024-12-08 18:55,Jaipur,Violent Crime
+167,21.1458,79.0882,PUBLIC INTOXICATION,Substance,Mining camp drinking,2024-12-09 21:30,Nagpur,Other Crime
+101,15.2993,74.1240,ROBBERY,Physical,Casino robbery,2024-12-10 02:45,Goa,Violent Crime
+356,30.7333,76.7794,KIDNAPPING,Physical,Political kidnapping,2024-12-11 07:15,Chandigarh,Other Crime
+390,25.5941,85.1376,CYBERCRIME,Online,Government portal hacking,2024-12-12 14:20,Patna,Other Crime
+559,31.1048,77.1734,ASSAULT,Physical,Hill station assault,2024-12-13 11:45,Shimla,Violent Crime
+344,34.0837,74.7973,SEXUAL ASSAULT,Physical,Tourist harassment,2024-12-14 17:10,Srinagar,Violent Crime
+385,27.0238,88.2636,BURGLARY,Breaking,Monastery burglary,2024-12-15 04:25,Gangtok,Other Crime
+236,24.5854,73.7125,DOMESTIC VIOLENCE,Physical,Royal family dispute,2024-12-16 20:40,Udaipur,Violent Crime
+277,32.7266,74.8570,ILLEGAL POSSESSION,Weapon,Militant weapon cache,2024-12-17 15:55,Jammu,Other Crime
+343,8.5241,76.9366,TRAFFIC VIOLATION,Vehicle,Tourist bus accident,2024-12-18 09:30,Thiruvananthapuram,Traffic Fatality
+387,9.9312,76.2673,PUBLIC INTOXICATION,Substance,Port worker drinking,2024-12-19 22:15,Kochi,Other Crime
+168,18.5204,73.8567,VEHICLE - STOLEN,Theft,Software company car theft,2024-12-20 06:50,Pune,Violent Crime
+270,20.2961,85.8245,CYBERCRIME,Online,Temple donation fraud,2024-12-21 13:25,Bhubaneswar,Other Crime
+205,25.4358,81.8463,ILLEGAL POSSESSION,Drug,University drug possession,2024-12-22 18:40,Allahabad,Other Crime
+272,26.8467,80.9462,EXTORTION,Threat,Government office extortion,2024-12-23 11:15,Lucknow,Other Crime
+226,23.0225,72.5714,HOMICIDE,Physical,Industrial dispute murder,2024-12-24 16:30,Ahmedabad,Other Crime
+562,28.4595,77.0266,BURGLARY,Breaking,Corporate office burglary,2024-12-25 03:45,Gurgaon,Other Crime
+328,28.7041,77.1025,CYBERCRIME,Online,Government website hacking,2024-12-26 12:20,Delhi,Other Crime
+224,29.9457,78.1642,DRUG OFFENSE,Substance,Tourist drug possession,2024-12-27 17:35,Dehradun,Other Crime
+503,30.3165,78.0322,ASSAULT,Physical,Adventure sport assault,2024-12-28 14:50,Rishikesh,Violent Crime
+418,24.7136,84.9900,BURGLARY,Breaking,Religious site burglary,2024-12-29 08:15,Gaya,Other Crime
+568,25.5941,85.1376,ILLEGAL POSSESSION,Weapon,Political rally weapon,2024-12-30 19:25,Patna,Other Crime
+562,22.7196,75.8577,BURGLARY,Breaking,Commercial complex burglary,2024-12-31 01:40,Indore,Other Crime
