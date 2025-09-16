@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { MapContainer, TileLayer, CircleMarker, Popup, useMap, Rectangle } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap, Rectangle } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import "./styles/MarkerCluster.css";
+import "./styles/MarkerCluster.Default.css";
 import "./MapView.css";
 
 // Fit map to markers
@@ -74,6 +77,27 @@ const MapView = ({ crimes }) => {
     }
   };
 
+  // Build marker icon as a simple colored dot using DivIcon (no image assets needed)
+  const getMarkerIcon = (type, mobile) => {
+    const color = getColor(type);
+    const size = mobile ? 24 : 18;
+    const html = `<span style="
+      display:inline-block;
+      width:${size}px;
+      height:${size}px;
+      border-radius:50%;
+      background:${color};
+      border:2px solid #fff;
+      box-shadow:0 0 3px rgba(0,0,0,0.6);
+    "></span>`;
+    return L.divIcon({
+      className: "crime-marker",
+      html,
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2]
+    });
+  };
+
   // Build a simple grid overlay to mark regions with crimes
   const validCrimes = crimes.filter((c) => Number.isFinite(c.Latitude) && Number.isFinite(c.Longitude));
   const cellSize = 0.5; // degrees; coarse grid for country-level view
@@ -116,11 +140,8 @@ const MapView = ({ crimes }) => {
     gridRects.push({ key, bounds, color, intensity, count: bin.count, topType });
   });
 
-  
   return (
     <div className="map-container">
-
-
       <MapContainer
         center={[20.5937, 78.9629]}
         zoom={5}
@@ -151,20 +172,14 @@ const MapView = ({ crimes }) => {
         <FitBounds crimes={crimes} onBoundsChange={setCrimeBounds} />
         {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
 
-        <MarkerClusterGroup>
+        <MarkerClusterGroup chunkedLoading spiderfyOnMaxZoom showCoverageOnHover>
           {crimes
             .filter((c) => Number.isFinite(c.Latitude) && Number.isFinite(c.Longitude))
             .map((c, idx) => (
-              <CircleMarker
+              <Marker
                 key={idx}
-                center={[c.Latitude, c.Longitude]}
-                radius={isMobile ? 12 : 8}
-                pathOptions={{
-                  color: "#fff", // white border for visibility
-                  fillColor: getColor(c.CrimeType || c.CrimeCode),
-                  fillOpacity: 0.9,
-                  weight: isMobile ? 4 : 3
-                }}
+                position={[c.Latitude, c.Longitude]}
+                icon={getMarkerIcon(c.CrimeType || c.CrimeCode, isMobile)}
               >
                 <Popup>
                   <strong>{c.CrimeType || c.CrimeCode}</strong><br/>
@@ -174,7 +189,7 @@ const MapView = ({ crimes }) => {
                   Time: {c.Time || "-"}<br/>
                   Place: {c.Place || "-"}
                 </Popup>
-              </CircleMarker>
+              </Marker>
             ))}
         </MarkerClusterGroup>
       </MapContainer>
