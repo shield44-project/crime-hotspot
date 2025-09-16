@@ -151,6 +151,8 @@ def _load_dataset(dataset_param: str | None, limit: int | None) -> pd.DataFrame:
     raise RuntimeError(f"Failed to load any dataset. Last error: {last_err}")
 
 
+# Helper: no-op placeholder for potential shared utilities
+
 @app.route("/api/crimes")
 def get_crimes():
     # Parameters
@@ -178,11 +180,23 @@ def get_crimes():
     f_start = request.args.get("start") or request.args.get("Start") or old_start
     f_end = request.args.get("end") or request.args.get("End") or old_end
 
-    # Ranges for coordinates
+    # Ranges for coordinates (also supports bbox=west,south,east,north)
     lat_min = request.args.get("lat_min")
     lat_max = request.args.get("lat_max")
     lon_min = request.args.get("lon_min")
     lon_max = request.args.get("lon_max")
+    bbox = request.args.get("bbox")
+    if bbox:
+        try:
+            parts = [float(x.strip()) for x in str(bbox).split(",")]
+            if len(parts) == 4:
+                west, south, east, north = parts
+                lon_min = str(west)
+                lat_min = str(south)
+                lon_max = str(east)
+                lat_max = str(north)
+        except Exception:
+            pass
 
     try:
         df = _load_dataset(dataset, limit_val)
@@ -315,6 +329,49 @@ def get_hotspots():
         })
 
     return jsonify(clusters)
+
+@app.route("/api/crimes_geojson")
+def crimes_geojson():
+    # Reuse the filtering logic by invoking get_crimes and converting to GeoJSON
+    result = get_crimes()
+
+    # Handle possible (response, status) tuple vs Response
+    if isinstance(result, tuple):
+        resp, status = result
+        if status != 200:
+            return resp, status
+        data = resp.get_json(silent=True) or []
+    else:
+        resp = result
+        data = resp.get_json(silent=True) or []
+
+    features = []
+    for idx, c in enumerate(data):
+        lat = c.get("Latitude")
+        lon = c.get("Longitude")
+        try:
+            lat_f = float(lat) if lat is not None else None
+            lon_f = float(lon) if lon is not None else None
+        except (TypeError, ValueError):
+            lat_f = lon_f = None
+        if lat_f is None or lon_f is None:
+            continue
+        # GeoJSON uses [lon, lat]
+        geom = {"type": "Point", "coordinates": [lon_f, lat_f]}
+        # Keep properties (excluding geometry fields to avoid duplication)
+        props = {k: v for k, v in c.items() if k not in ("Latitude", "Longitude")}
+        features.append({
+            "type": "Feature",
+            "id": idx,
+            "geometry": geom,
+            "properties": props
+        })
+
+    return jsonify({"type": "FeatureCollection", "features": features})
+
+@app.route("/api/health")
+def health():
+    return jsonify({"status": "ok", "time": datetime.utcnow().isoformat() + "Z"})
 
 # Serve built frontend if available
 @app.route("/", defaults={"path": ""})
