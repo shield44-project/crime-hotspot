@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap, Rectangle } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import "leaflet.heat";
 import "./styles/MarkerCluster.css";
 import "./styles/MarkerCluster.Default.css";
 import "./MapView.css";
@@ -27,6 +28,19 @@ const ResetViewButton = ({ bounds }) => {
     if (bounds?.length) map.fitBounds(bounds, { padding: [50, 50] });
   };
   return <button className="reset-button" onClick={handleReset}>Reset View</button>;
+};
+
+const HeatmapLayer = ({ points }) => {
+  const map = useMap();
+  useEffect(() => {
+    if (!map) return;
+    const heat = L.heatLayer(points, { radius: 25, blur: 15, maxZoom: 12 });
+    heat.addTo(map);
+    return () => {
+      map.removeLayer(heat);
+    };
+  }, [map, points]);
+  return null;
 };
 
 const MapView = ({ crimes }) => {
@@ -151,6 +165,9 @@ const MapView = ({ crimes }) => {
         maxZoom={12}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+        {/* Heatmap overlay using lat,lon,[intensity=1] */}
+        <HeatmapLayer points={validCrimes.map((c) => [c.Latitude, c.Longitude, 1])} />
 
         {/* Region density overlay (dominant type color, opacity by density) */}
         {gridRects.map((g) => (

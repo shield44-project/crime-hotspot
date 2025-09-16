@@ -1,0 +1,21 @@
+crime_code,latitude,longitude,crime_type,crime_mode,crime_description,time,place,crime_domain
+576,28.6139,77.2090,IDENTITY THEFT,Online,Identity theft through phishing,2024-01-15 14:30,New Delhi,Violent Crime
+128,19.0760,72.8777,HOMICIDE,Physical,Murder case in residential area,2024-01-16 22:15,Mumbai,Other Crime
+271,13.0827,80.2707,KIDNAPPING,Physical,Child kidnapping case,2024-01-17 09:45,Chennai,Other Crime
+170,22.5726,88.3639,BURGLARY,Breaking,House burglary at night,2024-01-18 03:20,Kolkata,Other Crime
+421,23.2599,77.4126,VANDALISM,Physical,Property damage case,2024-01-19 16:10,Bhopal,Other Crime
+442,17.3850,78.4867,ASSAULT,Physical,Physical assault incident,2024-01-20 11:30,Hyderabad,Violent Crime
+172,12.9716,77.5946,VEHICLE - STOLEN,Theft,Car theft from parking,2024-01-21 08:45,Bangalore,Violent Crime
+169,26.9124,75.7873,COUNTERFEITING,Financial,Fake currency circulation,2024-01-22 13:20,Jaipur,Other Crime
+338,21.1458,79.0882,EXTORTION,Threat,Money extortion case,2024-01-23 19:30,Nagpur,Other Crime
+497,15.2993,74.1240,PUBLIC INTOXICATION,Substance,Public drunkenness,2024-01-24 21:45,Goa,Other Crime
+260,30.7333,76.7794,FRAUD,Financial,Credit card fraud,2024-01-25 10:15,Chandigarh,Other Crime
+563,25.5941,85.1376,IDENTITY THEFT,Online,Social media identity theft,2024-01-26 15:40,Patna,Violent Crime
+498,31.1048,77.1734,FRAUD,Financial,Insurance fraud case,2024-01-27 12:30,Shimla,Other Crime
+436,34.0837,74.7973,ASSAULT,Physical,Domestic violence case,2024-01-28 20:15,Srinagar,Violent Crime
+266,27.0238,88.2636,SEXUAL ASSAULT,Physical,Sexual harassment case,2024-01-29 18:20,Gangtok,Violent Crime
+357,24.5854,73.7125,COUNTERFEITING,Financial,Document forgery,2024-01-30 14:45,Udaipur,Other Crime
+509,32.7266,74.8570,DRUG OFFENSE,Substance,Drug possession case,2024-01-31 16:30,Jammu,Other Crime
+342,11.9416,79.8083,ARSON,Physical,Property arson case,2024-02-01 02:15,Pondicherry,Fire Accident
+480,8.5241,76.9366,CYBERCRIME,Online,Online banking fraud,2024-02-02 11:45,Thiruvananthapuram,Other Crime
+369,9.9312,76.2673,EXTORTION,Threat,Business extortion,2024-02-03 17:20,Kochi,Other Crime

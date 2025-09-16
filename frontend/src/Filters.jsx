@@ -19,18 +19,6 @@ const Filters = ({ filters, setFilters, crimes }) => {
       <h3 className="filters-title">Filters</h3>
 
       <div className="filter-group">
-        <label className="filter-label">Dataset CSV Path</label>
-        <input
-          className="filter-input"
-          type="text"
-          name="dataset"
-          placeholder='e.g., @/api/datasets/crime.csv'
-          value={filters.dataset || ""}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="filter-group">
         <label className="filter-label">Crime Code</label>
         <select
           className="filter-input"
