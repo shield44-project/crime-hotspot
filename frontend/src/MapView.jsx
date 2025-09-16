@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap, Rectangle } from "react-leaflet";
-import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "./styles/MarkerCluster.css";
@@ -91,7 +90,7 @@ const MapView = ({ crimes }) => {
       box-shadow:0 0 3px rgba(0,0,0,0.6);
     "></span>`;
     return L.divIcon({
-      className: "crime-marker",
+      className: "leaflet-div-icon crime-marker",
       html,
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2]
@@ -158,6 +157,7 @@ const MapView = ({ crimes }) => {
           <Rectangle
             key={`grid-${g.key}`}
             bounds={g.bounds}
+            interactive={false}
             pathOptions={{ fillColor: g.color, fillOpacity: g.intensity, color: g.color, weight: 0 }}
           >
             <Popup>
@@ -172,7 +172,7 @@ const MapView = ({ crimes }) => {
         <FitBounds crimes={crimes} onBoundsChange={setCrimeBounds} />
         {crimeBounds && <ResetViewButton bounds={crimeBounds} />}
 
-        <MarkerClusterGroup chunkedLoading spiderfyOnMaxZoom showCoverageOnHover>
+        <>
           {crimes
             .filter((c) => Number.isFinite(c.Latitude) && Number.isFinite(c.Longitude))
             .map((c, idx) => (
@@ -180,6 +180,7 @@ const MapView = ({ crimes }) => {
                 key={idx}
                 position={[c.Latitude, c.Longitude]}
                 icon={getMarkerIcon(c.CrimeType || c.CrimeCode, isMobile)}
+                zIndexOffset={1000}
               >
                 <Popup>
                   <strong>{c.CrimeType || c.CrimeCode}</strong><br/>
@@ -191,7 +192,7 @@ const MapView = ({ crimes }) => {
                 </Popup>
               </Marker>
             ))}
-        </MarkerClusterGroup>
+        </>
       </MapContainer>
     </div>
   );

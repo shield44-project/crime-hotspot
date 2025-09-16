@@ -5,6 +5,17 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Ensure div-based icons are visible (transparent background, no border) */
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Improve cluster z-index in our custom pane */
+.leaflet-pane.markersPane {
+  z-index: 700 !important;
+}
+
 /* Toggle Filters Button */
 .toggle-filters {
   position: fixed;
