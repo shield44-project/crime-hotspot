@@ -85,7 +85,7 @@
   .app-container {
     flex-direction: column;
     height: 100vh;
-    height: -webkit-fill-available; /* Fix iOS Safari 100vh issue */
+    height: -webkit-fill-available; /* iOS Safari fallback */
   }
 
   .map-wrapper {

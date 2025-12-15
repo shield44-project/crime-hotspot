@@ -89,7 +89,7 @@ const MapView = ({ crimes }) => {
       border-radius:50%;
       background:${color};
       border:2px solid #fff;
-      box-shadow:0 0 ${mobile ? 4 : 3}px rgba(0,0,0,0.6);
+      box-shadow:0 0 4px rgba(0,0,0,0.6);
     "></span>`;
     return L.divIcon({
       className: "leaflet-div-icon crime-marker",
