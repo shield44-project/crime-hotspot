@@ -146,24 +146,120 @@
 
 /* Mobile Styles */
 @media(max-width: 768px) {
+  .map-container {
+    height: 100%;
+    width: 100%;
+  }
+
   .filter-panel {
-    width: 80%;
+    width: 85%;
+    max-width: 320px;
     top: 60px;
     left: 0;
     border-radius: 0 12px 12px 0;
+    max-height: 70vh;
+    font-size: 12px;
+  }
+
+  .filter-panel h3 {
+    font-size: 15px;
+  }
+
+  .filter-panel label {
+    font-size: 12px;
+  }
+
+  .filter-panel select {
+    padding: 8px;
+    font-size: 13px;
   }
 
   .crime-stats-panel {
-    width: 90%;
+    width: calc(100% - 20px);
+    max-width: 400px;
     left: 50%;
     transform: translateX(-50%);
     top: auto;
-    bottom: 80px;
+    bottom: 100px;
     text-align: center;
+    font-size: 12px;
+  }
+
+  .crime-stats-panel h3 {
+    font-size: 14px;
+  }
+
+  .crime-stats-panel p {
+    font-size: 12px;
   }
 
   .toggle-filters {
     font-size: 16px;
+    padding: 8px 12px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .reset-button {
+    font-size: 12px;
+    padding: 8px 12px;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Ensure map controls are accessible on mobile */
+  .leaflet-control-zoom {
+    margin-top: 60px !important;
+  }
+
+  .leaflet-control-attribution {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* Small mobile devices */
+@media(max-width: 480px) {
+  .filter-panel {
+    width: 90%;
+    max-width: 280px;
+    padding: 12px 10px;
+    font-size: 11px;
+  }
+
+  .filter-panel h3 {
+    font-size: 14px;
+  }
+
+  .crime-stats-panel {
+    bottom: 90px;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .toggle-filters {
+    font-size: 14px;
     padding: 6px 10px;
+  }
+
+  .reset-button {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+
+/* Landscape mobile */
+@media(max-width: 768px) and (orientation: landscape) {
+  .crime-stats-panel {
+    width: 200px;
+    top: 60px;
+    bottom: auto;
+    right: 10px;
+    left: auto;
+    transform: none;
+  }
+
+  .filter-panel {
+    max-height: 80vh;
   }
 }

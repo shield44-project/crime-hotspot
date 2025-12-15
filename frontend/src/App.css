@@ -1,0 +1,153 @@
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  background: #000000;
+  overflow: hidden;
+}
+
+/* Map wrapper */
+.map-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Data source controls */
+.data-source-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1200;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 8px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.data-source-select {
+  padding: 8px 12px;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  background: #333333;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+.data-source-select:hover {
+  background: #444444;
+  border-color: #ffffff;
+}
+
+.data-source-select:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.file-upload-input {
+  padding: 6px 10px;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  background: #333333;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-upload-input::-webkit-file-upload-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+}
+
+.file-upload-input::-webkit-file-upload-button:hover {
+  background: #cccccc;
+  transform: scale(1.02);
+}
+
+/* 📱 Mobile Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    height: 100vh;
+    height: -webkit-fill-available; /* Fix iOS Safari 100vh issue */
+  }
+
+  .map-wrapper {
+    flex: 1;
+    min-height: 0; /* Allow flex child to shrink */
+  }
+
+  .data-source-controls {
+    position: fixed;
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    max-width: 500px;
+    justify-content: center;
+    padding: 12px;
+    z-index: 1300; /* Higher than sidebar */
+  }
+
+  .data-source-select {
+    flex: 1;
+    min-width: 0;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .file-upload-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .file-upload-input::-webkit-file-upload-button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+/* 📱 Small Mobile Devices (iPhone SE, etc.) */
+@media (max-width: 480px) {
+  .data-source-controls {
+    flex-direction: column;
+    width: calc(100% - 16px);
+    padding: 10px;
+  }
+
+  .data-source-select {
+    width: 100%;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .data-source-controls {
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

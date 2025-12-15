@@ -5,6 +5,7 @@ import Filters from "./Filters";
 import Sidebar from "./Sidebar";
 import Papa from "papaparse";
 import * as XLSX from "xlsx";
+import "./App.css";
 
 // Normalize various schemas to a common internal shape
 function normalizeRecords(records) {
@@ -192,17 +193,18 @@ const App = () => {
   };
 
   return (
-    <div style={{ display: "flex", height: "100vh", background: "#000000" }}>
+    <div className="app-container">
       <Sidebar
         filters={filters}
         setFilters={setFilters}
         crimes={crimes}
       />
-      <div style={{ flex: 1, position: "relative" }}>
+      <div className="map-wrapper">
         <MapView crimes={crimes} />
         {/* Simple top bar for data source switching and upload */}
-        <div style={{ position: "absolute", top: 10, left: 10, zIndex: 1200, display: "flex", gap: 8 }}>
+        <div className="data-source-controls">
           <select
+            className="data-source-select"
             value={filters.source}
             onChange={(e) => setFilters((f) => ({ ...f, source: e.target.value }))}
           >
@@ -212,6 +214,7 @@ const App = () => {
 
           {filters.source === "bundle" && (
             <select
+              className="data-source-select"
               value={filters.presetFile}
               onChange={(e) => setFilters((f) => ({ ...f, presetFile: e.target.value }))}
             >
@@ -220,7 +223,12 @@ const App = () => {
           )}
 
           {filters.source === "upload" && (
-            <input type="file" accept=".csv,.json,.xlsx,.xls" onChange={(e) => e.target.files?.[0] && onUpload(e.target.files[0])} />
+            <input 
+              className="file-upload-input"
+              type="file" 
+              accept=".csv,.json,.xlsx,.xls" 
+              onChange={(e) => e.target.files?.[0] && onUpload(e.target.files[0])} 
+            />
           )}
         </div>
       </div>

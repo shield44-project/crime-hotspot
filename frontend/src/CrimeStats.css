@@ -58,7 +58,52 @@
     width: 100%;
     height: auto;
     border-left: none;
-    border-top: 1px solid #ddd;
-    margin-top: 20px;
+    border-top: 1px solid #444444;
+    margin-top: 0;
+  }
+
+  .stats-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .stats-total {
+    font-size: 13px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .export-btn {
+    padding: 12px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    /* Better touch target */
+    min-height: 44px;
+  }
+
+  .chart-wrapper {
+    padding: 12px;
+    overflow-x: auto;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .stats-title {
+    font-size: 14px;
+  }
+
+  .stats-total {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .export-btn {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .chart-wrapper {
+    padding: 10px;
   }
 }

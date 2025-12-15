@@ -80,7 +80,8 @@ const MapView = ({ crimes }) => {
   // Build marker icon as a simple colored dot using DivIcon (no image assets needed)
   const getMarkerIcon = (type, mobile) => {
     const color = getColor(type);
-    const size = mobile ? 24 : 18;
+    // Larger markers on mobile for better touch interaction
+    const size = mobile ? 28 : 18;
     const html = `<span style="
       display:inline-block;
       width:${size}px;
@@ -88,7 +89,7 @@ const MapView = ({ crimes }) => {
       border-radius:50%;
       background:${color};
       border:2px solid #fff;
-      box-shadow:0 0 3px rgba(0,0,0,0.6);
+      box-shadow:0 0 ${mobile ? 4 : 3}px rgba(0,0,0,0.6);
     "></span>`;
     return L.divIcon({
       className: "leaflet-div-icon crime-marker",
